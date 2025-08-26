@@ -1,0 +1,108 @@
+.contenido {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    justify-content: flex-end;
+    padding: 5vw 10vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.titulo-5::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+    transform: translateX(0);
+    width: 25%;
+    height: 5px;
+    background-color: #E3AE24;
+    border-radius: 1.5px;
+}
+
+.titulo-5 p {
+    font-size: 2rem;
+    font-family: "Helvetica" sans-serif;
+    background: transparent;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    max-width: 40%;
+    text-wrap: nowrap;
+    text-align: start;
+    line-height: 1.2;
+}
+
+.design-5 {
+    min-width: 45vw;
+    text-align: left;
+    box-shadow: black 0 0 10px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px 40px;
+}
+
+.descripcion-5 p {
+    margin-top: 100px;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    text-align: justify;
+    color: #999;
+}
+
+.descripcion-5 p strong{
+    font-weight: 900;
+    color: #000000;
+}
+
+.border-b-5 {
+    border-bottom: 5px solid #FE7300;
+    margin: 10px 0px;
+}
+
+.titulo-feature {
+    font-size: 1.5rem;
+    font-family: "Audiowide", sans-serif;
+    color: #001B3D;
+    background: transparent;
+    border: 0;
+    font-weight: 300;
+    text-align: center;
+}
+
+.border-feature {
+    width: 50px;
+    height: 10px;
+    background-color: #FE7300;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.asistencia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.asistencia .titulo {
+    color: #FE7300;
+    font-size: 1.2rem;
+}
+
+.asistencia .descripcion {
+    color: white;
+    font-family: "Audiowide", sans-serif;
+    font-size: 2rem;
+}
+
+.id_3 {
+    margin-top: 20px;
+}
