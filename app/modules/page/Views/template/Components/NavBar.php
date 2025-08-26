@@ -6,10 +6,18 @@
             </div>
 
             <ul class="nav-menu">
-                <?php for ($i = 1; $i < count($navbar); $i++): ?>
-                    <li class="nav-item"><a href="/" class="nav-link"><?= $navbar[$i]['detalle']->contenido_titulo ?></a></li>
+                <?php
+                $currentUrl = $_SERVER['REQUEST_URI'];
+                for ($i = 1; $i < count($navbar); $i++):
+                    $isActive = ($navbar[$i]['detalle']->contenido_enlace === $currentUrl) ? 'activo' : '';
+                ?>
+                    <li class="nav-item">
+                        <a href="<?= $navbar[$i]['detalle']->contenido_enlace ?>" class="nav-link <?= $isActive ?>">
+                            <?= $navbar[$i]['detalle']->contenido_titulo ?>
+                        </a>
+                    </li>
                 <?php endfor; ?>
-                <li class="nav-item"><a href="/contact" class="nav-link nav-contact">Contáctanos</a></li>
+                <li class="nav-item"><a href="/contact" class="nav-link nav-contact">CONTÁCTENOS</a></li>
             </ul>
 
             <div class="hamburger">
@@ -19,5 +27,11 @@
             </div>
         </div>
     </nav>
-
 </header>
+
+<style>
+    .activo {
+        font-weight: bold;
+        color: black;
+    }
+</style>

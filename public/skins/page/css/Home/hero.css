@@ -37,14 +37,18 @@
 
 
 .navbar {
-    padding: 0.2rem 0;
+    padding: 0 6rem;
     background-color: #E3AE24;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    
 }
 
 .nav-container {
     min-width: 100%;
-    margin: 0 auto;
-    padding: 1% 1%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,6 +57,7 @@
 .nav-logo {
     max-width: 200px;
     height: auto;
+
 }
 
 .logo-text-full {
@@ -69,20 +74,17 @@
     align-items: center;
 }
 
-.nav-item {
-    margin: 0;
-}
+
 
 .nav-link {
     color: white;
     text-wrap: nowrap;
-    padding: 2px 1px;
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
     font-style: normal;
     font-family: 'Helvetica' sans-serif;
-
+    height: auto;
 }
 
 .nav-link:hover {
@@ -92,13 +94,15 @@
 .nav-contact {
     background: transparent;
     border: 0;
-    color: #FE7300;
+    color: #ffffff;
     font-weight: 600;
+    background-color: black;
+    padding: 1.5rem 1rem;
 }
 
 .nav-contact:hover {
-    background: #FE7300;
-    color: #1e40af;
+    background: white;
+    color: black;
 }
 
 .hamburger {

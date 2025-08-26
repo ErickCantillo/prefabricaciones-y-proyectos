@@ -218,7 +218,7 @@ header .navbar-nav {
 
 /* FOOTER */
 footer {
-  background-color: var(--primary-color);
+  background-color: #000;
   color: var(--accent-color);
   padding: 20px 0;
 }
