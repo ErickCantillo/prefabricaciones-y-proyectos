@@ -654,9 +654,7 @@ FLOTANTES FIN
   aspect-ratio: 1/1;
 }
 
-.contenido-home .caja-contenido-simple .descripcion {
-  margin-top: 15px;
-}
+
 
 .id_5 .caja-contenido-simple .descripcion::after {
   content: "";

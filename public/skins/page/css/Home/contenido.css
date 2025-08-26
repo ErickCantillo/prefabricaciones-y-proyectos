@@ -106,3 +106,193 @@
 .id_3 {
     margin-top: 20px;
 }
+
+.carouselsection {
+    display: block;
+    position: relative;
+    
+    padding: 10px 60px;
+}
+
+.carousel_inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    text-align: left;
+}
+
+.carousel_inner ul {
+    position: relative;
+    left: 0px;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    width: 9999px;
+    z-index: 1;
+}
+
+.carousel_inner ul li {
+    display: table-cell;
+    vertical-align: top;
+    text-align: center;
+    margin: 0;
+    padding: 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilos para las tarjetas del carrusel */
+.carousel_inner .caja-contenido-simple {
+    background: white !important;
+    border: none !important;
+    border-radius: 15px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+}
+
+.carousel_inner .caja-contenido-simple:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.carousel_inner .caja-contenido-simple img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.carousel_inner .caja-contenido-simple h2 {
+    font-family: "Helvetica", sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #001B3D;
+    margin: 15px 20px 10px 20px;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+
+.carousel_inner .caja-contenido-simple .descripcion {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+.carousel_inner .caja-contenido-simple .descripcion p {
+    margin: 0;
+    font-size: 0.85rem !important;
+    color: #666 !important;
+}
+
+.carousel_inner .caja-contenido-simple .btn-vermas,
+.carousel_inner .caja-contenido-simple .boton-crediciti a {
+    display: inline-flex;
+    align-items: center;
+    background: #FE7300;
+    color: white !important;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    margin: 0 20px 20px 20px;
+    border: none;
+    text-transform: none;
+    justify-content: space-between;
+    max-width: fit-content;
+}
+
+.carousel_inner .caja-contenido-simple .btn-vermas:hover,
+.carousel_inner .caja-contenido-simple .boton-crediciti a:hover {
+    background: #e6650a;
+    transform: translateX(3px);
+}
+
+.carousel_inner .caja-contenido-simple .btn-vermas::after,
+.carousel_inner .caja-contenido-simple .boton-crediciti a::after {
+    content: '→';
+    margin-left: 8px;
+    font-weight: bold;
+}
+
+/* Controles de navegación */
+.caja-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    border: 2px solid #f0f0f0;
+    opacity: 1;
+}
+
+.carouselsection:hover .caja-control {
+    opacity: 1;
+}
+
+.caja-control:hover {
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-color: #FE7300;
+}
+
+.left_scroll {
+    left: -25px;
+}
+
+.right_scroll {
+    right: -25px;
+}
+
+.caja-control i {
+    color: #FE7300;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.caja-control:hover i {
+    color: #001B3D;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carouselsection {
+        padding: 20px 10px;
+    }
+    
+    .carousel_inner {
+        width: 90%;
+    }
+    
+    .carousel_inner ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .carousel_inner li {
+        min-width: 90%;
+        max-width: 300px;
+    }
+    
+    .caja-control {
+        display: none;
+    }
+}
