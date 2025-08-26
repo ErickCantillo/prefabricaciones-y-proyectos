@@ -1,6 +1,7 @@
 /* Fuentes H - Ordenadas por peso (100-800) */
 @import "./Home/hero.css";
 @import "./Home/contenido.css";
+@import "./footer.css";
 
 @font-face {
   font-family: 'Helvetica';
