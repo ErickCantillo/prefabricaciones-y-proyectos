@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= $this->_titlepage ?></title>
   <?php $infopageModel = new Page_Model_DbTable_Informacion();
-    $infopage = $infopageModel->getById(1);
-    ?>
+  $infopage = $infopageModel->getById(1);
+  ?>
 
   <!-- Bootsrap CSS -->
   <link rel="stylesheet" href="/components/bootstrap/css/bootstrap.min.css">
@@ -16,7 +16,7 @@
   <!-- CSS Global -->
   <link rel="stylesheet" href="/skins/administracion/css/global.css">
 
-  <link rel="shortcut icon" href="/images/<?= $infopage->info_pagina_favicon; ?>">
+  <link rel="shortcut icon" href="/favicon.ico">
 
 </head>
 

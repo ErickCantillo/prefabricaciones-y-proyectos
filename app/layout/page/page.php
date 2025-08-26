@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="/components/aos-master/dist/aos.css">
   <script src="/components/aos-master/dist/aos.js"></script>
 
-  <link rel="shortcut icon" href="/images/<?= $infopage->info_pagina_favicon; ?>">
+  <link rel="shortcut icon" href="/favicon.ico">
   <!-- Fancybox -->
 
   <link rel="stylesheet" href="/components/fancybox/carousel.css" />

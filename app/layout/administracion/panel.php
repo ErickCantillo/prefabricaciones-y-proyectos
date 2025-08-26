@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="/components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
   <!-- Global CSS -->
   <link rel="stylesheet" href="/skins/administracion/css/global.css">
-  <link rel="shortcut icon" href="/images/<?= $infopage->info_pagina_favicon; ?>">
+  <link rel="shortcut icon" href="/favicon.ico">
     <!-- Dropzone -->
   <link rel="stylesheet" href="/components/dropzone/dist/dropzone.css">
   <script src="/components/dropzone/dist/dropzone.js"></script>
