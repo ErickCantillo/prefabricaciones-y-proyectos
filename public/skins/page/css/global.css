@@ -1,6 +1,7 @@
 /* Fuentes H - Ordenadas por peso (100-800) */
 @import "./Home/hero.css";
 @import "./Home/contenido.css";
+@import "./Home/carrousel.css";
 @import "./footer.css";
 
 @font-face {
@@ -28,7 +29,6 @@
   padding: 0;
   font-family: 'Teachers', sans-serif;
   /* font-weight: 200; */
-  position: relative;
   /* border: 1px solid red;  */
 }
 
@@ -444,10 +444,6 @@ FLOTANTES FIN
 
 .carousel-control-next,
 .carousel-control-prev {
-  width: 5%;
-  z-index: 9;
-  height: 90%;
-  height: 73%;
   margin: auto;
 }
 
@@ -648,7 +644,6 @@ FLOTANTES FIN
 
 .id_5 .caja-contenido-simple .imagen-contenido img {
   width: 100%;
-  max-width: 80px;
   object-fit: cover;
   display: block;
   margin: 0 auto;

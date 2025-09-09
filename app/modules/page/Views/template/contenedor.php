@@ -1,9 +1,13 @@
 <?php
 $navbar = $this->contenidos[0]['hijos'];
 include __DIR__ . '/Components/NavBar.php';
-$hero = $this->contenidos[1];
 
-include __DIR__ . '/Components/Hero.php';
+$hero = $this->contenidos[1];
+var_dump($this->seccion);
+if($this->seccion == 1){
+	include __DIR__ . '/Components/Hero.php';
+}
+
 
 for ($i = 2 ; $i < count($this->contenidos); $i++) {
 	$contenedor = $this->contenidos[$i]['detalle'];

@@ -74,19 +74,7 @@
                 </div>
             <?php } ?>
         </div>
-        <?php if (count($this->banners) > 1) { ?>
-
-            <button type="button" class="carousel-control-prev"
-                data-bs-target="#carouselprincipal<?php echo $this->seccionbanner; ?>" data-bs-slide="prev">
-                <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
-                <i class="fa-solid fa-chevron-left carousel-control-prev-icono"></i>
-            </button>
-            <button type="button" class="carousel-control-next"
-                data-bs-target="#carouselprincipal<?php echo $this->seccionbanner; ?>" data-bs-slide="next">
-                <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
-                <i class="fa-solid fa-chevron-right carousel-control-next-icono"></i>
-            </button>
-        <?php } ?>
+      
 
     </div>
 </div>

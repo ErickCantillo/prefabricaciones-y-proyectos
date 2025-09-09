@@ -5,22 +5,21 @@
  */
 class Page_Model_Template_Template
 {
-
 	protected $_view;
+	protected $seccion;
 	function __construct($view)
 	{
 		$this->_view = $view;
-		$this->_view->selected_lang = isset($_COOKIE['user_lang']) ? $_COOKIE['user_lang'] : 'es';
 	}
 
 	public function getContentseccion($seccion)
 	{
-
+		
 		$contenidoModel = new Page_Model_DbTable_Contenido();
 		$contenidos = [];
 		// Obtener contenidos principales de la sección
 		$rescontenidos = $contenidoModel->getList(
-			"contenido_estado='1' AND contenido_seccion = '$seccion' AND contenido_padre = '0'", 
+			"contenido_estado='1' AND contenido_seccion = '$seccion' AND contenido_padre = '0' OR contenido_titulo like 'navBar'", 
 			"orden ASC"
 		);
 		
@@ -31,6 +30,8 @@ class Page_Model_Template_Template
 			];
 		}
 		$this->_view->contenidos = $contenidos;
+		$this->_view->seccion = $seccion;
+		
 		return $this->_view->getRoutPHP("modules/page/Views/template/contenedor.php");
 	}
 
@@ -65,7 +66,9 @@ class Page_Model_Template_Template
 				'hijos' => $this->buildContentHierarchy($contenidoModel, $hijo->contenido_id, $nivel + 1, $maxNivel)
 			];
 			// Mantener compatibilidad con el array plano para niveles específicos
-			$this->_view->contenidos['hijos_' . $hijo->contenido_id] = $estructura[$key]['hijos'];
+			$contenidos = isset($this->_view->contenidos) ? $this->_view->contenidos : [];
+			$contenidos['hijos_' . $hijo->contenido_id] = $estructura[$key]['hijos'];
+			$this->_view->contenidos = $contenidos;
 		}
 
 		return $estructura;

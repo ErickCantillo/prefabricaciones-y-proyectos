@@ -9,3 +9,4 @@ class Administracion_welcomeController extends Administracion_mainController
         }
     }
 }
+    

@@ -42,7 +42,7 @@
           
           <?php if ($hasDescription): ?>
             <div class="descripcion-slider">
-              <?php echo $slider->contenido_descripcion; ?>
+              <!-- <?php echo $slider->contenido_descripcion; ?> -->
             </div>
           <?php endif; ?>
 

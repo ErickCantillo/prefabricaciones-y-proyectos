@@ -16,7 +16,7 @@
 
   <!-- Global CSS -->
   <link rel="stylesheet" href="/skins/page/css/global.css?v=2">
-  <link rel="stylesheet" href="/src/output.css">
+ 
   <link rel="stylesheet" href="/skins/page/css/responsive.css?v=2">
 
   <!-- FontAwesome -->

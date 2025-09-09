@@ -519,7 +519,7 @@ function aparecercolumna() {
   if (id_columna == "5" || id_columna == "6") {
     $(".no-colum").attr("style", "display:block!important");
   } else {
-    $(".no-colum").attr("style", "display:none!important");
+    // $(".no-colum").attr("style", "display:none!important");
   }
 }
 aparecercolumna();

@@ -16,7 +16,7 @@ class View
 
     function __get($name)
     {
-        return $this->_data[$name];
+        return isset($this->_data[$name]) ? $this->_data[$name] : null;
     }
 
     public function getObjectVariable($object, $var)

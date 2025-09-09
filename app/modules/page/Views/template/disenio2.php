@@ -13,7 +13,7 @@
 			</div>
 		<?php } ?>
 		<div <?php if ($contenido->contenido_imagen) { ?>class="col-contenido  col-md-7" <?php } else { ?>class="col-contenido  col-sm-12" <?php } ?>>
-			<div class="descripcion">
+			<div class="">
 				<?php echo $contenido->contenido_descripcion; ?>
 			</div>
 

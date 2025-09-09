@@ -155,7 +155,7 @@
 				</div>
 				<div class="col-12 mt-4 no-start <?php if ($this->content->contenido_padre == 0) { ?>d-none <?php } ?> no-colum">
 					<h2 class="content-title">
-						Layout 2 <?= $tipo ?>
+						Layout 	
 					</h2>
 				</div>
 				<?php if (($tipo != 4) || $this->contentpadre->contenido_tipo == 2) { ?>
