@@ -58,7 +58,7 @@
     padding: 25px 40px;
 }
 
-.design-5 button {
+button {
     display: inline-flex;
     align-items: center;
     gap: 5px;
@@ -74,7 +74,7 @@
     transition: color 0.3s;
 }
 
-.design-5 button .vermas-text {
+button .vermas-text {
     color: #E3AE24;
     font-size: 1.2rem;
     background: none;
