@@ -7,6 +7,6 @@ class Page_nosotrosController extends Page_mainController
   {
     // $this->_view->banner = $this->template->banner(2);
     $this->_view->seccion = 2;
-    $this->_view->contenido = $this->template->getContentseccion(2);
+    $this->_view->contenido = $this->template->getContentseccion(2, 'Nosotros');
   }
 }

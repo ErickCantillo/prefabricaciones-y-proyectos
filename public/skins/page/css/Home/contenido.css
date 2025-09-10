@@ -13,7 +13,7 @@
 .titulo-5::after {
     content: '';
     position: absolute;
-    bottom: 15px;
+    bottom: 70px;
     left: 10;
     transform: translateX(0);
     width: 10%;
@@ -106,6 +106,7 @@
 .design-5 button:hover .vermas-text {
     color: #b88c1a;
 }
+
 .design-5 button:hover .vermas-circle {
     background: #b88c1a;
 }
@@ -118,7 +119,7 @@
     color: #999;
 }
 
-.descripcion-5 p strong{
+.descripcion-5 p strong {
     font-weight: 900;
     color: #000000;
 }
@@ -133,23 +134,21 @@
     font-weight: 900;
     /* uppercase; */
     text-transform: uppercase;
-    font-family: "Helvetica", sans-serif;  
+    font-family: "Helvetica", sans-serif;
     display: flex;
     padding-bottom: 10px;
     position: relative;
     overflow: hidden;
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
 }
-
-
 
 .feature {
     display: flex;
     align-items: start;
     justify-content: center;
-    margin: 4vh 4vw;
+
     flex-direction: column;
 }
 
@@ -194,3 +193,238 @@
     margin-top: 20px;
 }
 
+.nosotros-img {
+    border: 15px solid white;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.35);
+    border-radius: 4px;
+    width: 100%;
+    height: auto;
+}
+
+/* Contenedor principal para alinear y limitar el ancho */
+.nosotros-container {
+    padding: 40px 20px;
+}
+
+/* Estilo para el párrafo de introducción */
+.intro-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Contenedor para las dos columnas de la lista */
+.project-list-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    /* Espacio entre las columnas */
+    gap: 10px;
+    /* Espacio mínimo entre columnas */
+}
+
+/* Estilo para cada una de las listas (columnas) */
+.project-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    /* Cada columna ocupa casi la mitad del espacio */
+}
+
+/* Estilo para cada elemento de la lista */
+.project-list li {
+    margin-bottom: 12px;
+    /* Espacio vertical entre los elementos */
+    font-size: 1.3rem;
+    color: #555;
+}
+
+/* Agrega el símbolo ">" antes de cada elemento */
+.project-list li::before {
+    content: ">";
+    /* El símbolo que quieres mostrar */
+    color: #d4a237;
+    /* Color dorado/amarillo similar al de la imagen */
+    font-weight: bold;
+    margin-right: 10px;
+    /* Espacio entre el símbolo y el texto */
+}
+
+.intro-text strong {
+    font-weight: 900;
+    color: #000000;
+}
+
+.titulo-seccion {
+    display: flex;
+    /* Activa Flexbox */
+    align-items: baseline;
+    /* Centra verticalmente los elementos */
+    gap: 15px;
+    /* Espacio entre el texto y la línea */
+}
+
+/* Estilo del texto del título */
+.titulo-seccion h2 {
+    margin: 0;
+    /* Quita el margen por defecto del h2 */
+    font-size: 4rem;
+    font-weight: 400;
+    color: #d4a237;
+    font-family: "Helvetica", sans-serif;
+    /* Mismo color dorado del ejemplo anterior */
+    letter-spacing: 1.5px;
+    /* Espacio entre letras */
+}
+
+/* Estilo de la línea decorativa */
+.titulo-seccion .linea {
+    font-size: 4rem;
+    color: #6c757d;
+    /* Color gris oscuro */
+}
+
+.nosotros-capacidad {
+    background-image: url('/upload/capacidad.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+
+    padding: 4vh 4vw;
+    background-repeat: no-repeat;
+
+}
+
+.nosotros-contamos {
+    background-image: url('/upload/Contamos.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    color: white;
+    padding: 4vh 4vw;
+    font-size: 1.2rem;
+    background-repeat: no-repeat;
+}
+
+.nosotros-ofrecemos {
+    background-image: url('/upload/Ofrecemos.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    padding: 4vh 4vw;
+    font-size: 1.2rem;
+    background-repeat: no-repeat;
+}
+
+.id_32 {
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-bottom: 0rem !important;
+}
+
+.product-list-container {
+    max-width: 600px;
+}
+
+.product-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-list li {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+}
+
+/* Usamos el pseudo-elemento ::before para agregar el símbolo ">" */
+.product-list li::before {
+    content: ">";
+    margin-right: 15px;
+    /* Espacio entre el símbolo y el texto */
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.clientes-title {
+    margin-top: 4vh;
+    padding-top: 4vh 0;
+    border-bottom: solid #d4a237;
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.id_36 .row {
+    padding: 2vh 10vw;
+}
+
+.ver-mas-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0.5rem;
+    /* Equivalente a p-2 */
+    border: none;
+    background-color: transparent;
+    /* Necesario para que las transiciones de los hijos funcionen con :hover */
+}
+
+/* Texto del botón */
+.ver-mas-btn-texto {
+    font-size: 1.25rem;
+    /* Equivalente a text-xl */
+    font-weight: 500;
+    /* Equivalente a font-medium */
+    color: #4a5568;
+    /* Equivalente a text-gray-700 */
+    margin-right: 1rem;
+    /* Equivalente a mr-4 */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Círculo que contiene el ícono */
+.ver-mas-btn-icono-circulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    /* Equivalente a w-12 */
+    height: 3rem;
+    /* Equivalente a h-12 */
+    background-color: #f6e05e;
+    /* Equivalente a bg-yellow-400 */
+    border-radius: 9999px;
+    /* Equivalente a rounded-full */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    /* Equivalente a shadow-md */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Ícono de Font Awesome */
+.ver-mas-btn-icono-fa {
+    color: white;
+    font-size: 1.25rem;
+}
+
+/* --- Efectos Hover --- */
+
+/* Cambia el color del texto al pasar el cursor sobre el botón */
+.ver-mas-btn:hover .ver-mas-btn-texto {
+    color: #1a202c;
+    /* Equivalente a group-hover:text-gray-900 */
+}
+
+/* Escala y cambia el color del círculo al pasar el cursor sobre el botón */
+.ver-mas-btn:hover .ver-mas-btn-icono-circulo {
+    transform: scale(1.1);
+    /* Equivalente a group-hover:scale-110 */
+    background-color: #f59e0b;
+    /* Equivalente a group-hover:bg-yellow-500 */
+}

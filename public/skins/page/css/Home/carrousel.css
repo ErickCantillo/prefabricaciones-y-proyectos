@@ -1,6 +1,6 @@
 /* Media Query para pantallas de 768px o más grandes */
 @media (min-width: 768px) {
-    .carousel-inner {
+    .miCarrusel-inner {
         display: flex;
         /* Activa Flexbox */
     }
@@ -19,13 +19,13 @@
 .id_27 {
     height: 20rem;
 }
-.carousel{
+.miCarrusel{
     position: absolute;
     margin: 0 5rem;
     z-index: 20;
 }
 
-.carousel-inner {
+.miCarrusel-inner {
     padding: 5rem 5rem;
 }
 

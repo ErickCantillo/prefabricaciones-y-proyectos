@@ -41,3 +41,9 @@
 .footer-link:hover::before {
     width: 100%;
 }
+
+.footer-section{
+    background-color: black;
+    width: 100%;
+    margin-top: auto;
+}

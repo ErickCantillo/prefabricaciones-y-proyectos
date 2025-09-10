@@ -45,14 +45,22 @@
 
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   width: 100%;
   overflow: auto !important;
   overflow-x: hidden !important;
   padding: 0 !important;
   padding-right: 0 !important;
-  height: 100dvh;
+  min-height: 100vh;
   background-color: #E3AE24;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
@@ -171,6 +179,9 @@ button, input[type="submit"], input[type="button"] {
 
 /* HEADER */
 
+.main-general {
+  flex: 1;
+}
 
 .logo-header {
   max-width: 100px;
@@ -523,8 +534,6 @@ FLOTANTES FIN
 }
 
 
-.sub-banner {}
-
 .sub-banner a {
   background-color: var(--tertiary-color);
   border-radius: 15px;
@@ -544,7 +553,6 @@ FLOTANTES FIN
   transform: scale(1.02);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 
 .contenido-sub-banner {
   display: flex;
@@ -585,7 +593,7 @@ FLOTANTES FIN
 }
 
 .contenedor-seccion {
-  padding: 40px 0;
+  padding: 4vh 4vw;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -632,9 +640,6 @@ FLOTANTES FIN
 .carousel-indicators .active {
   background-color: var(--primary-color);
 }
-
-
-.content-box>.row {}
 
 /* HOME */
 /* beneficios */
@@ -1020,10 +1025,6 @@ FIN GALERIA
   color: var(--accent-color);
 }
 
-.contenido-nosotros .caja-contenido-simple {
-  /* margin-top: 15px; */
-}
-
 .contenido-nosotros .caja-contenido-simple .img-fluid {
   display: block;
   margin: 0 auto;
@@ -1057,9 +1058,7 @@ FIN GALERIA
 
 /* Servicios */
 
-.contenido-interna .contenedor-seccion {
-  padding: 15px 0;
-}
+
 
 .contenedor-contacto {
   padding: 15px;
@@ -1081,9 +1080,6 @@ FIN GALERIA
   object-fit: cover;
 }
 
-.id_32 .columna-seccion {
-  margin-bottom: 1.5rem;
-}
 
 .contenido-servicios .img-fluid {
   width: 100%;

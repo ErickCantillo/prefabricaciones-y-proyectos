@@ -44,7 +44,6 @@
     top: 0;
     left: 0;
     z-index: 100;
-    
 }
 
 .nav-container {
@@ -160,7 +159,7 @@
     text-align: center;
 }
 
-.hero-title p {
+.hero-title {
     font-size: 2rem;
     color: #E3AE24;
     font-weight: 100;
@@ -168,7 +167,7 @@
     line-height: 1.2;
 }
 
-.hero-description p {
+.hero-description {
     font-size: 3.5rem;
     color: white;
     width: 47vw;

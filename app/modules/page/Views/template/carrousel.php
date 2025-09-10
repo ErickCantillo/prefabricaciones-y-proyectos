@@ -1,6 +1,6 @@
 <div class="carouselsection" style="background-color:<?php echo $colorfondo; ?> padding: 5rem;">
-	<div id="miCarrusel" class="carousel slide" data-bs-ride="carousel">
-		<div class="carousel-inner">
+	<div id="miCarrusel" class="carousel slide miCarrusel" data-bs-ride="carousel">
+		<div class="carousel-inner miCarrusel-inner">
 			<?php $colorfondo = $columna->contenido_fondo_color; ?>
 			<?php foreach ($carrousel as $key => $contenidoItem) : ?>
 				<?php $contenido = $contenidoItem['detalle']; ?>

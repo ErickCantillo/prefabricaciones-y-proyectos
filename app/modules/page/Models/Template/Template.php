@@ -12,17 +12,16 @@ class Page_Model_Template_Template
 		$this->_view = $view;
 	}
 
-	public function getContentseccion($seccion)
+	public function getContentseccion($seccion, $page = 'Inicio')
 	{
 		
 		$contenidoModel = new Page_Model_DbTable_Contenido();
 		$contenidos = [];
 		// Obtener contenidos principales de la sección
 		$rescontenidos = $contenidoModel->getList(
-			"contenido_estado='1' AND contenido_seccion = '$seccion' AND contenido_padre = '0' OR contenido_titulo like 'navBar'", 
+			"contenido_estado='1' AND contenido_seccion = '$seccion' AND contenido_padre = '0' or contenido_titulo like 'navBar' or contenido_id = 36", 
 			"orden ASC"
 		);
-		
 		foreach ($rescontenidos as $key => $contenido) {
 			$contenidos[$key] = [
 				'detalle' => $contenido,
@@ -30,6 +29,7 @@ class Page_Model_Template_Template
 			];
 		}
 		$this->_view->contenidos = $contenidos;
+		$this->_view->page = $page;
 		$this->_view->seccion = $seccion;
 		
 		return $this->_view->getRoutPHP("modules/page/Views/template/contenedor.php");
@@ -78,7 +78,14 @@ class Page_Model_Template_Template
 	{
 		$this->_view->seccionbanner = $seccion;
 	
-		
+		$publicidadModel = new Page_Model_DbTable_Publicidad();
+		$banners = $publicidadModel->getList("publicidad_seccion = '$seccion' AND publicidad_estado = '1' AND publicidad_padre = '0'", "orden ASC");
+		foreach($banners as $banner){
+			$subBanners = $publicidadModel->getList("publicidad_seccion = '$seccion' AND publicidad_estado = '1' AND publicidad_padre = '$banner->publicidad_id'", "orden ASC");
+			$banner->subBanners = $subBanners;
+		}
+		$this->_view->banners = $banners;
+		// print_r($banners);
 		// print_r($banners);
 		return $this->_view->getRoutPHP("modules/page/Views/template/bannerprincipalind.php");
 	}

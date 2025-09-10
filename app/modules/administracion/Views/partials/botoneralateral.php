@@ -4,10 +4,16 @@
     <li <?php if ($this->botonpanel == 1) { ?>class="activo" <?php } ?>>
       <a href="/administracion/panel">
         <i class="fas fa-info-circle"></i> 
-        Page Information
+        Información de la Página
       </a>
     </li>
   <?php } ?>
+  <li <?php if ($this->botonpanel == 2) { ?>class="activo" <?php } ?>>
+    <a href="/administracion/publicidad">
+      <i class="far fa-images"></i> 
+      Administrador de Publicidad
+    </a>
+  </li>
  
   <li <?php if ($this->botonpanel == 3) { ?>class="activo" <?php } ?>>
     <a href="/administracion/contenido">

@@ -13,8 +13,8 @@
         <h5 class="footer-title">LINKS</h5>
         <div class="info">
           <ul class="footer-links">
-            <li><a href="#" class="footer-link">Inicio</a></li>
-            <li><a href="#" class="footer-link">Nosotros</a></li>
+            <li><a href="/" class="footer-link">Inicio</a></li>
+            <li><a href="/page/nosotros" class="footer-link">Nosotros</a></li>
             <li><a href="#" class="footer-link">Productos</a></li>
             <li><a href="#" class="footer-link">Servicios</a></li>
             <li><a href="#" class="footer-link">Galería</a></li>
