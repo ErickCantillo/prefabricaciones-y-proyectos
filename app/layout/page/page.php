@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="/components/aos-master/dist/aos.css">
   <script src="/components/aos-master/dist/aos.js"></script>
 
-  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="shortcut icon" href="/favicon.png">
   <!-- Fancybox -->
 
   <link rel="stylesheet" href="/components/fancybox/carousel.css" />

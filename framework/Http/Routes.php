@@ -1,13 +1,13 @@
 <?php
 
 /**
-*
-*/
+ *
+ */
 class Http_Routes
 {
 	const DEFAULT_MODULE = 'page';
 	const DEFAULT_CONTROLLER = 'index';
-    const DEFAULT_ACTION = 'index';
+	const DEFAULT_ACTION = 'index';
 
 	protected $_module;
 	protected $_controller;
@@ -17,25 +17,26 @@ class Http_Routes
 
 	function __construct()
 	{
-		$routes=explode('/',explode('?', $_SERVER['REQUEST_URI'])[0]);
-		if ($routes[1]){
+		$routes = explode('/', explode('?', $_SERVER['REQUEST_URI'])[0]);
+		if ($routes[1]) {
 			$this->_module = $routes[1];
 		} else {
 			$this->_module = self::DEFAULT_MODULE;
 		}
-		if (isset($routes[2])){
+
+		if (isset($routes[2]) && $routes[2] != '') {
 			$this->_controller =  $routes[2];
-		} else{
+		} else {
 			$this->_controller = self::DEFAULT_CONTROLLER;
 		}
-		if (isset($routes[3])){
+		if (isset($routes[3])) {
 			$this->_action = $routes[3];
 		} else {
-		 	$this->_action = self::DEFAULT_ACTION;
+			$this->_action = self::DEFAULT_ACTION;
 		}
-		if(count($routes)>=4){
-			for($r = 4; $r <= count($routes); $r++){
-				array_push($this->_routs , $routes[$r]);
+		if (count($routes) >= 4) {
+			for ($r = 4; $r <= count($routes); $r++) {
+				array_push($this->_routs, $routes[$r]);
 			}
 		}
 	}
@@ -66,5 +67,4 @@ class Http_Routes
 	{
 		return $this->_routs;
 	}
-
 }

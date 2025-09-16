@@ -6,6 +6,14 @@
 class Administracion_panelController extends Administracion_mainController
 {
 	public $botonpanel = 1;
+	protected $mainModel;
+	protected $namefilter;
+	protected $route;
+	protected $namepages;
+	protected $namepageactual;
+	protected $pages;
+
+
 	public function init()
 	{
 		$this->mainModel = new Administracion_Model_DbTable_Enlace();

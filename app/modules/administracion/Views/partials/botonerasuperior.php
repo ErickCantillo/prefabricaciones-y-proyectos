@@ -1,7 +1,3 @@
-<!-- <div class="infousuario">
-	<span ><i class="fas fa-user-tie" aria-hidden="true"></i> Welcome: <?php echo $_SESSION['kt_login_name']; ?></span>
-	<a href="/administracion/loginuser/logout" class="enlace-salir">Exit <i class="fas fa-sign-out-alt"></i></a></i>
-</div> -->
 
 <div class="header-bx">
   <div class="header-bx-left">
@@ -16,15 +12,19 @@
   </div>
   <div class="header-bx-right">
     <div class="user-info-wrapper">
-      <i class="fa-solid fa-user"></i>
-      <strong>Bienvenido:</strong>
-      <span><?php echo $_SESSION['kt_login_name']; ?></span>
-    </div>
-    <div class="logout-wrapper">
-      <a href="/administracion/loginuser/logout">
+      <div class="user-avatar">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <div class="user-details">
+        <span class="user-greeting">Hola,</span>
+        <span class="user-name"><?php echo $_SESSION['kt_login_name']; ?></span>
+      </div>
+      <div class="logout-wrapper">
+      <a href="/administracion/loginuser/logout" class="logout-btn">
         <i class="fas fa-sign-out-alt"></i>
-        <span>Exit</span>
       </a>
     </div>
+    </div>
+    
   </div>
 </div>

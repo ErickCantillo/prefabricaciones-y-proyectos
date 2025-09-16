@@ -35,14 +35,6 @@ class Page_Model_Template_Template
 		return $this->_view->getRoutPHP("modules/page/Views/template/contenedor.php");
 	}
 
-	/**
-	 * Construye la jerarquía de contenidos de forma recursiva
-	 * @param object $contenidoModel Modelo de contenido
-	 * @param string $padreId ID del contenido padre
-	 * @param int $nivel Nivel actual de profundidad (para control de recursión)
-	 * @param int $maxNivel Nivel máximo permitido (por defecto 6)
-	 * @return array Estructura jerárquica de contenidos
-	 */
 	private function buildContentHierarchy($contenidoModel, $padreId, $nivel = 1, $maxNivel = 6)
 	{
 		// Prevenir recursión infinita
@@ -85,15 +77,13 @@ class Page_Model_Template_Template
 			$banner->subBanners = $subBanners;
 		}
 		$this->_view->banners = $banners;
-		// print_r($banners);
-		// print_r($banners);
 		return $this->_view->getRoutPHP("modules/page/Views/template/bannerprincipalind.php");
 	}
 	public function banner($seccion)
 	{
 		$this->_view->seccionbanner = $seccion;
-
-
+		$publicidadModel = new Page_Model_DbTable_Publicidad();
+		$this->_view->banners = $publicidadModel->getList("publicidad_seccion = '$seccion' AND publicidad_estado = '1'", "orden ASC");
 		return $this->_view->getRoutPHP("modules/page/Views/template/bannerinternas.php");
 	}
 }

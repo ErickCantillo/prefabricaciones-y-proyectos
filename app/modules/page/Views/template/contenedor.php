@@ -1,13 +1,14 @@
 <?php
 $navbar = $this->contenidos[0]['hijos'];
 include __DIR__ . '/Components/NavBar.php';
-if ($this->seccion != 1) {
-	var_dump($this->seccion	);
-	include __DIR__ . '/Components/Breadcrumb.php';
-}
+// if ($this->seccion != 1) {
+// 	var_dump($this->seccion	);
+// 	include __DIR__ . '/Components/Breadcrumb.php';
+// }
 
 foreach ($this->contenidos as $key => $rescontenido) {
 	if($key > 0) {
+		
 	$contenedor = $rescontenido['detalle'];
 	if ($contenedor->contenido_tipo == 1) {
 		include(APP_PATH . "modules/page/Views/template/bannersimple.php");

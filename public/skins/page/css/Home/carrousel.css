@@ -10,7 +10,7 @@
         /* 100% / 2 = 50% */
         flex: 0 0 50%;
 
-        
+
         display: block;
         /* Asegura que el ítem sea visible */
     }
@@ -19,18 +19,19 @@
 .id_27 {
     height: 20rem;
 }
-.miCarrusel{
+
+.miCarrusel {
     position: absolute;
     margin: 0 5rem;
     z-index: 20;
 }
 
 .miCarrusel-inner {
-    padding: 5rem 5rem;
+    padding: 0 5rem;
 }
 
 .item-carrussel {
-    width: 100%;
+    width: 80%;
     position: absolute;
     border-radius: 0 10px;
     min-height: 60;
@@ -58,19 +59,22 @@
     padding-bottom: 1rem;
     text-align: left;
     border-bottom: #E3AE24 2px solid;
-    
 }
 
 .item-products-text h3 {
-    font-size: 1.7rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
     font-family: "Helvetica" sans-serif;
-    font-weight: bold;
+    font-weight: 900;
+    line-height: 1;
     margin-bottom: 10px;
 }
+
 .item-products-text p {
-   color: #999;
-   font-size: 1.2rem;
+    color: #999999;
+    font-size: 1.3rem;
+    text-align: justify;
+    padding-right: 1rem;
     font-family: "Helvetica" sans-serif;
     font-weight: 200;
     margin-bottom: 10px;
@@ -88,13 +92,14 @@
     opacity: 1 !important;
     padding: 0 4px;
 }
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     filter: invert(100%);
 }
 
 
-
+.carousel-control-prev:hover,
 .carousel-control-next:hover {
     background-color: #E3AE24;
     color: white;

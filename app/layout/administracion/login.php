@@ -16,7 +16,7 @@
   <!-- CSS Global -->
   <link rel="stylesheet" href="/skins/administracion/css/global.css">
 
-  <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.png">
 
 </head>
 

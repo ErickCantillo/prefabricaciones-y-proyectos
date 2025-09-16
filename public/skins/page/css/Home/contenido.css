@@ -13,7 +13,7 @@
 .titulo-5::after {
     content: '';
     position: absolute;
-    bottom: 70px;
+    bottom: -7%;
     left: 10;
     transform: translateX(0);
     width: 10%;
@@ -35,13 +35,13 @@
     border-radius: 1.5px;
 }
 
-.titulo-5 p {
+.titulo-5 {
     font-size: 2rem;
     font-family: "Helvetica" sans-serif;
     background: transparent;
     border: 0;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 900;
     max-width: 40%;
     text-wrap: nowrap;
     text-align: start;
@@ -51,7 +51,6 @@
 .design-5 {
     min-width: 45vw;
     text-align: left;
-    margin-left: 5vw;
     box-shadow: black 0 0 10px;
     background-color: white;
     border-radius: 10px;
@@ -183,11 +182,6 @@ button .vermas-text {
     font-size: 1.2rem;
 }
 
-.asistencia .descripcion {
-    color: white;
-    font-family: "Audiowide", sans-serif;
-    font-size: 2rem;
-}
 
 .id_3 {
     margin-top: 20px;
@@ -427,4 +421,118 @@ button .vermas-text {
     /* Equivalente a group-hover:scale-110 */
     background-color: #f59e0b;
     /* Equivalente a group-hover:bg-yellow-500 */
+}
+
+.product-list-card {
+    /* border: 1px solid #eee; */
+    margin-bottom: 16px;
+    background-color: #E3AE24;
+    /* transition: box-shadow 0.3s ease; */
+    display: flex;
+    color: white;
+    border: 4px solid white;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.35);
+    /* border-radius: 4px; */
+    width: 100%;
+    height: auto;
+
+}
+
+.product-list-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-list-card-img {
+    width: 200px;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 0px !important;
+    border-right: 1px solid #ddd;
+    margin-right: 20px;
+}
+
+.product-list-card-container {
+    padding: 20px;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-list-card-container h2 {
+    font-family: "Helvetica";
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: black;
+}
+
+.product-list-card-container p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.ver-mas-product-list {
+    background: linear-gradient(135deg, #252424, #333333);
+    color: white;
+    width: fit-content;
+    padding: 12px 40px;
+    border-radius: 15px;
+  
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid white;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.35);
+    height: auto;
+}
+
+.ver-mas-product-list::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.ver-mas-product-list:hover::before {
+    left: 100%;
+}
+
+.ver-mas-product-list:hover {
+    background: linear-gradient(135deg, #333333, #404040);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 36, 36, 0.4);
+    color: white;
+}
+
+.ver-mas-product-list:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(37, 36, 36, 0.3);
+}
+
+.ver-mas-product-list i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.ver-mas-product-list:hover i {
+    transform: translateX(3px);
+}
+
+.product-card-ver-mas-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
 }
