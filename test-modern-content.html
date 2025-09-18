@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Modern Content Manager</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div>
+        <h1>Test del Modern Content Manager</h1>
+        <p>Abrir consola del navegador para ver los logs</p>
+        
+        <!-- Simulamos los filtros -->
+        <div>
+            <input type="text" id="contenido_titulo" placeholder="Filtro título">
+            <select id="contenido_seccion">
+                <option value="">Todas las secciones</option>
+                <option value="1">Sección 1</option>
+            </select>
+            <input type="date" id="contenido_fecha">
+        </div>
+
+        <!-- Simulamos la tabla -->
+        <div id="content-table-container">
+            <p>Contenido de la tabla aquí...</p>
+        </div>
+    </div>
+
+    <script src="public/skins/administracion/js/modern-content-manager.js"></script>
+    <script>
+        // Test básico
+        console.log('🧪 Iniciando test del Modern Content Manager');
+        
+        // Verificar que la clase existe
+        if (typeof ModernContentManager !== 'undefined') {
+            console.log('✅ Clase ModernContentManager cargada correctamente');
+            
+            // Intentar crear una instancia
+            try {
+                const manager = new ModernContentManager();
+                console.log('✅ Instancia creada exitosamente:', manager);
+                
+                // Verificar propiedades
+                console.log('currentFilters:', manager.currentFilters);
+                console.log('abortController:', manager.abortController);
+                
+                // Test de abort controller
+                setTimeout(() => {
+                    console.log('🧪 Probando AbortController...');
+                    if (manager.abortController) {
+                        console.log('✅ AbortController está inicializado');
+                    } else {
+                        console.log('⚠️ AbortController es null');
+                    }
+                }, 1000);
+                
+            } catch (error) {
+                console.error('❌ Error al crear instancia:', error);
+            }
+        } else {
+            console.error('❌ Clase ModernContentManager no encontrada');
+        }
+    </script>
+</body>
+</html>

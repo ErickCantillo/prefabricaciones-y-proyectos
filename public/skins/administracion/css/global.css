@@ -348,8 +348,8 @@ footer.panel-derechos a {
 }
 
 #panel-botones {
-  background: #333333;
-  color: #ffffff;
+  /* background: #333333; */
+  background-color: #ffffff;
   min-height: calc(100vh - 110px);
   padding: 0;
 }
@@ -364,6 +364,7 @@ footer.panel-derechos a {
 }
 
 #panel-botones ul li a {
+  background-color: #000000;
   color: #ffffff;
   text-decoration: none;
   display: block;
@@ -1368,16 +1369,7 @@ header .header-bx .logout-wrapper a {
   text-decoration: none;
   color: #fff;
 }
-#panel-botones {
-  width: 300px;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  height: calc(100vh - 60px);
-  background: var(--gray);
-  display: none;
-  z-index: 1000;
-}
+
 #panel-botones .sidebar-brand {
   display: flex;
   justify-content: center;
@@ -1682,7 +1674,7 @@ header .header-bx .user-info-wrapper:hover .user-avatar {
   display: flex;
   align-items: center;
   padding: 1px 20px;
-  color: rgba(255, 255, 255, 0.8);
+  /* color: rgba(255, 255, 255, 0.8); */
   text-decoration: none;
   border-radius: 12px;
   margin: 0 8px;

@@ -426,7 +426,8 @@ class Administracion_contenidoController extends Administracion_mainController
 		$array['3'] = 'Productos';
 		$array['4'] = 'Servicios';
 		$array['5'] = 'Galería';
-		$array['6'] = 'Contacto';
+		$array['6'] = 'Clientes';
+		$array['7'] = 'Contacto';
 		return $array;
 	}
 
