@@ -205,7 +205,8 @@
     }
 
     .hero-description {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
+        width: 351px;
     }
 
     .hero-buttons {

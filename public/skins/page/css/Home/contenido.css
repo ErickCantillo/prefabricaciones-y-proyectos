@@ -23,6 +23,7 @@
 }
 
 
+
 .galeria-list-card {
     /* border: 1px solid #eee; */
     margin-bottom: 16px;
@@ -558,4 +559,25 @@ button .vermas-text {
     display: flex;
     justify-content: flex-end;
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .titulo-5 {
+        font-size: 1.5rem;
+    }
+
+
+    .titulo-5::after{
+    /* uppercase; */
+    text-transform: uppercase;
+    font-family: "Helvetica", sans-serif;
+    display: flex;
+    width: 100%;
+    padding-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
 }

@@ -30,6 +30,23 @@
     padding: 0 5rem;
 }
 
+
+@media (max-width: 768px) {
+    .miCarrusel {
+        margin: 0;
+        margin-right: 2rem;
+    }
+
+    .miCarrusel-inner {
+        padding: 0;
+    }
+
+    .id_27 {
+        height: 35rem;
+    }
+}
+
+
 .item-carrussel {
     width: 80%;
     position: absolute;
