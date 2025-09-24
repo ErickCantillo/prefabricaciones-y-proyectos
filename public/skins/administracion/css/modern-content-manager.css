@@ -1,8 +1,8 @@
 /* Modern Content Manager Styles */
 :root {
-  --primary-color: #6f42c1;
-  --primary-light: #8b69d4;
-  --primary-dark: #5a2e9a;
+  --primary-color: #e3ae24;
+  --primary-light: #e3ae24;
+  --primary-dark: #e3ae24;
   --secondary-color: #6c757d;
   --success-color: #28a745;
   --info-color: #17a2b8;
@@ -26,7 +26,7 @@
   margin: 0;
   font-size: 1.75rem;
   font-weight: 600;
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  border-radius: 0 0 var(--border-radius-sm) var(--border-radius-sm);
   box-shadow: var(--box-shadow);
   position: relative;
   overflow: hidden;

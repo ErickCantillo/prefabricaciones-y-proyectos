@@ -44,7 +44,7 @@
     object-fit: cover;
     border-radius: 0px !important;
     margin-bottom: 10px;
-    
+
 }
 
 .titulo-feature::after {
@@ -304,7 +304,7 @@ button .vermas-text {
     /* Color gris oscuro */
 }
 
-.nosotros-capacidad {
+/* .nosotros-capacidad {
     background-image: url('/upload/capacidad.jpg');
     background-size: cover;
     width: 100%;
@@ -334,12 +334,30 @@ button .vermas-text {
     padding: 4vh 4vw;
     font-size: 1.2rem;
     background-repeat: no-repeat;
+} */
+
+.design-three {
+    padding: 2vh 4vw;
+    font-size: 1.2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: -12px !important;
+    margin-right: -12px !important;
+    height: 100%;
 }
+
+.three-34 {
+    color: white;
+}
+
 
 .id_32 {
     margin: 0 !important;
     padding: 0 !important;
     margin-bottom: 0rem !important;
+    display: flex;
 }
 
 .product-list-container {
@@ -503,7 +521,6 @@ button .vermas-text {
     width: fit-content;
     padding: 12px 40px;
     border-radius: 15px;
-  
     font-size: 0.9rem;
     font-weight: 500;
     text-decoration: none;
@@ -561,23 +578,42 @@ button .vermas-text {
     width: 100%;
 }
 
+
+
+
 @media (max-width: 768px) {
     .titulo-5 {
         font-size: 1.5rem;
     }
 
+    .project-list-container {
+        padding: 0;
+    }
 
-    .titulo-5::after{
-    /* uppercase; */
-    text-transform: uppercase;
-    font-family: "Helvetica", sans-serif;
-    display: flex;
-    width: 100%;
-    padding-bottom: 10px;
-    position: relative;
-    overflow: hidden;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    .titulo-5::after {
+        /* uppercase; */
+        text-transform: uppercase;
+        font-family: "Helvetica", sans-serif;
+        display: flex;
+        width: 100%;
+        padding-bottom: 10px;
+        position: relative;
+        overflow: hidden;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .design-three {
+        padding: 5vh 5vw !important;
+        margin-left: 0px !important;
+        padding-left: 0px !important;
+        margin: 0px !important;
+        height: 100%;
+    }
+
+    .titulo-seccion h2{
+        font-size: 2.5rem;
+        font-weight: 900;
     }
 }
