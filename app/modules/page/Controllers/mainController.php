@@ -19,20 +19,20 @@ class Page_mainController extends Controllers_Abstract
 		$this->setLayout('page_page');
 		$this->template = new Page_Model_Template_Template($this->_view);
 		
-		// Inicializar $informacion como objeto antes de usarlo
+		
 		$infoModel = new Page_Model_DbTable_Informacion();
-
-		// $informacion->info_pagina_descripcion = '';
-		// $informacion->info_pagina_tags = '';
-		// $informacion->info_pagina_scripts = '';
 		$informacion = $infoModel->getList();
+
+		$publicidadModel = new Page_Model_DbTable_Publicidad();
+		$this->_view->botonesFlotantes = $publicidadModel->getList("publicidad_seccion='100' AND publicidad_estado='1'", "orden ASC");
+
 
 		$this->_view->infopage = $informacion;
 
-		$this->getLayout()->setData("meta_description", $informacion->info_pagina_descripcion);
-		$this->getLayout()->setData("meta_keywords", $informacion->info_pagina_tags);
-		$this->getLayout()->setData("scripts", $informacion->info_pagina_scripts);
-		
+		$this->getLayout()->setData("meta_description", $informacion['info_pagina_descripcion']);
+		$this->getLayout()->setData("meta_keywords", $informacion['info_pagina_tags']);
+		$this->getLayout()->setData("scripts", $informacion['info_pagina_scripts']);
+
 
 		$header = $this->_view->getRoutPHP('modules/page/Views/partials/header.php');
 		$this->getLayout()->setData("header",$header);

@@ -7,7 +7,7 @@ class Page_contactoController extends Page_mainController
   public function indexAction()
   {
     $this->_view->banner = $this->template->banner(7);
-    // $this->_view->contenido = $this->template->getContentseccion(5);
+    $this->_view->contenido = $this->template->getContentseccion(7, 'Contacto');
   }
 
   public function enviarcontactoAction()

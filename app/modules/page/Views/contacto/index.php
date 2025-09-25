@@ -13,15 +13,7 @@
 </style>
 <?php echo $this->banner ?>
 <div class="contenido-contacto contenido-interna">
-  <?php echo $this->contenido ?>
-</div>
 
-<?php 
-$selected_lang = isset($_COOKIE['user_lang']) ? $_COOKIE['user_lang'] : 'en';
-?>
-
-<!-- Contact Form -->
-<div class="container contenedor-contacto">
   <div class="row justify-content-center">
     <div class="col-12 col-lg-6 order-2 order-lg-1">
       <div class="card shadow-lg">
@@ -110,4 +102,6 @@ $selected_lang = isset($_COOKIE['user_lang']) ? $_COOKIE['user_lang'] : 'en';
       </div>
     </div>
   </div>
+</div>
+ <?php echo $this->contenido ?>
 </div>
