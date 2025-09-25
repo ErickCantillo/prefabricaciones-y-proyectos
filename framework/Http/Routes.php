@@ -29,7 +29,7 @@ class Http_Routes
 		} else {
 			$this->_controller = self::DEFAULT_CONTROLLER;
 		}
-		if (isset($routes[3])) {
+		if (isset($routes[3]) && $routes[3] != '') {
 			$this->_action = $routes[3];
 		} else {
 			$this->_action = self::DEFAULT_ACTION;

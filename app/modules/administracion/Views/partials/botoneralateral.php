@@ -29,6 +29,15 @@
       <div class="nav-indicator"></div>
     </a>
   </li>
+  <li class="nav-item <?php if ($this->botonpanel == 3) { ?>active<?php } ?>">
+    <a href="/administracion/productos" class="nav-link">
+      <div class="nav-icon">
+        <i class="fas fa-file-invoice"></i>
+      </div>
+      <span class="nav-text">Administrador de Productos</span>
+      <div class="nav-indicator"></div>
+    </a>
+  </li>
   <?php if (Session::getInstance()->get('kt_login_level') == '1') { ?>
     <li class="nav-item <?php if ($this->botonpanel == 4) { ?>active<?php } ?>">
       <a href="/administracion/usuario" class="nav-link">

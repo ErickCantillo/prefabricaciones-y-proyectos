@@ -20,10 +20,12 @@ class Page_mainController extends Controllers_Abstract
 		$this->template = new Page_Model_Template_Template($this->_view);
 		
 		// Inicializar $informacion como objeto antes de usarlo
-		$informacion = new stdClass();
-		$informacion->info_pagina_descripcion = '';
-		$informacion->info_pagina_tags = '';
-		$informacion->info_pagina_scripts = '';
+		$infoModel = new Page_Model_DbTable_Informacion();
+
+		// $informacion->info_pagina_descripcion = '';
+		// $informacion->info_pagina_tags = '';
+		// $informacion->info_pagina_scripts = '';
+		$informacion = $infoModel->getList();
 
 		$this->_view->infopage = $informacion;
 

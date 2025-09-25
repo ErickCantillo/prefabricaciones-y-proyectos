@@ -24,7 +24,7 @@ class App
 
     public function init()
     {
-        try {
+        // try {
             $controllerName = $this->_route->getModuleClass() . "_" . $this->_route->getController() . "Controller";
 
             $controller = new $controllerName($this->_response, $this->_request, $this->_route);
@@ -32,10 +32,10 @@ class App
             $action = $this->_route->getAction() . 'Action';
             $controller->$action();
             $controller->render();
-        } catch (Throwable $e) {
-            header('Location: /page/error?error=' . urlencode($e->getMessage()));
-            // echo 'Error/Excepcion capturada: ',  $e->getMessage(), "\n";
-        }
+        // } catch (Throwable $e) {
+        //     header('Location: /page/error?error=' . urlencode($e->getMessage()));
+        //     // echo 'Error/Excepcion capturada: ',  $e->getMessage(), "\n";
+        // }
     }
     public static function getDbConnection()
     {

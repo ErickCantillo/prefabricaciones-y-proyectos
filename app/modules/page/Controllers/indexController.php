@@ -11,7 +11,10 @@ class Page_indexController extends Page_mainController
   public function indexAction()
   {
     $this->_view->banner = $this->template->bannerPrincipalInd(1);
+    $productoModel = new Administracion_Model_DbTable_Productos();
+    $this->_view->productos = $productoModel->getList();
     $this->_view->contenido = $this->template->getContentseccion(1);
+    
 
   }
   public function enviarsubAction()

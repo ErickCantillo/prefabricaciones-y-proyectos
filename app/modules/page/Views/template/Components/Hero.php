@@ -11,4 +11,4 @@
             background-image: url('/images/<?php echo $hero['detalle']->contenido_fondo_imagen; ?>');
         }
     </style>
-</section>
+</section>  

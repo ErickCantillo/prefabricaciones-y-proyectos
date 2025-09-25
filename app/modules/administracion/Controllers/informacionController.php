@@ -177,7 +177,7 @@ class Administracion_informacionController extends Administracion_mainController
 	{
 		$data = array();
 		$data['info_pagina_facebook'] = $this->_getSanitizedParam("info_pagina_facebook");
-		$data['info_pagina_instagram'] = $this->_getSanitizedParam("info_pagina_instagram");
+		$data['info_pagina_instaaingram'] = $this->_getSanitizedParam("info_pagina_instagram");
 		$data['info_pagina_x'] = $this->_getSanitizedParam("info_pagina_x");
 		$data['info_pagina_pinterest'] = $this->_getSanitizedParam("info_pagina_pinterest");
 		$data['info_pagina_youtube'] = $this->_getSanitizedParam("info_pagina_youtube");

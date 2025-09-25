@@ -42,7 +42,8 @@
 
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -69,50 +70,60 @@ body {
 
 /* Estilos específicos para diferentes elementos */
 h1 {
-  font-weight: 800; /* ExtraBold */
+  font-weight: 800;
+  /* ExtraBold */
   font-size: 2.5rem;
   line-height: 1.2;
 }
 
 h2 {
-  font-weight: 700; /* Bold */
+  font-weight: 700;
+  /* Bold */
   font-size: 2rem;
   line-height: 1.3;
 }
 
 h3 {
-  font-weight: 600; /* SemiBold */
+  font-weight: 600;
+  /* SemiBold */
   font-size: 1.5rem;
   line-height: 1.4;
 }
 
 h4 {
-  font-weight: 600; /* SemiBold */
+  font-weight: 600;
+  /* SemiBold */
   font-size: 1.25rem;
   line-height: 1.4;
 }
 
 h5 {
-  font-weight: 500; /* Medium */
+  font-weight: 500;
+  /* Medium */
   font-size: 1.125rem;
   line-height: 1.4;
 }
 
 h6 {
-  font-weight: 500; /* Medium */
+  font-weight: 500;
+  /* Medium */
   font-size: 1rem;
   line-height: 1.4;
 }
 
 
 a {
-  font-weight: 500; /* Medium para enlaces */
+  font-weight: 500;
+  /* Medium para enlaces */
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
-button, input[type="submit"], input[type="button"] {
-  font-weight: 600; /* SemiBold para botones */
+button,
+input[type="submit"],
+input[type="button"] {
+  font-weight: 600;
+  /* SemiBold para botones */
 }
 
 /* Clases utilitarias para diferentes pesos de fuente */
@@ -411,6 +422,40 @@ FLOTANTES FIN
   }
 }
 
+.f-carousel {
+  --f-carousel-slide-width: 100%;
+
+
+  /* --f-carousel-slide-width: calc((100% - 16px) / 2); */
+}
+
+@media (min-width: 768px) {
+  .f-carousel {
+    --f-carousel-gap: 16px;
+    --f-carousel-slide-width: calc((100% - 16px) / 2);
+  }
+}
+
+#myCarousel {
+  /* --f-carousel-gap: 10px; */
+  /* --f-carousel-slide-width: 60%; */
+  --f-carousel-slide-padding: 20px;
+  /* --f-carousel-slide-bg: #eee; */
+
+  --f-arrow-pos: 10px;
+  --f-arrow-width: 50px;
+  --f-arrow-height: 50px;
+  --f-arrow-svg-width: 24px;
+  --f-arrow-svg-height: 24px;
+  --f-arrow-svg-stroke-width: 2.5;
+  --f-arrow-color: #475569;
+  --f-arrow-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%), 0 3px 7px -3px rgb(0 0 0 / 30%);
+  --f-arrow-border-radius: 50%;
+  --f-arrow-bg: #fff;
+  --f-arrow-hover-bg: #fff;
+  --f-arrow-active-bg: #f0f0f0;
+}
+
 .carousel-control-prev-icono {
   font-size: 30px;
   color: #343133;
@@ -576,7 +621,7 @@ FLOTANTES FIN
 }
 
 .contenedor-seccion {
-  padding: 8vh 4vw;
+  padding: 4vh 4vw;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1000,18 +1045,18 @@ FIN GALERIA
 }
 
 .btn-ver-mas-amarillo::after {
-    font-family: "FontAwesome";
-    font-weight: 900;
-    content: "\f054";
-    font-size: 1.2rem;
-    border-radius: 50%;
-    padding: 6px 10px;
-    margin-left: 10px;
-    color: #fff;
-    background-color: #E3AE24;
+  font-family: "FontAwesome";
+  font-weight: 900;
+  content: "\f054";
+  font-size: 1.2rem;
+  border-radius: 50%;
+  padding: 6px 10px;
+  margin-left: 10px;
+  color: #fff;
+  background-color: #E3AE24;
 }
 
-.btn-ver-mas-black{
+.btn-ver-mas-black {
   font-size: 17px;
   font-weight: 200;
   color: black;
@@ -1019,21 +1064,18 @@ FIN GALERIA
 }
 
 .btn-ver-mas-black::after {
-    font-family: "FontAwesome";
-    font-weight: 900;
-    content: "\f054";
-    font-size: 1.2rem;
-    border-radius: 50%;
-    padding: 6px 10px;
-    margin-left: 10px;
-    color: #fff;
-    background-color: #E3AE24;
+  font-family: "FontAwesome";
+  font-weight: 900;
+  content: "\f054";
+  font-size: 1.2rem;
+  border-radius: 50%;
+  padding: 6px 10px;
+  margin-left: 10px;
+  color: #fff;
+  background-color: #E3AE24;
 }
 
-.product-ver-mas {
- padding-bottom: 10px;
- padding-right: 40px;
-}
+
 
 .contenido-nosotros .caja-contenido-simple .img-fluid {
   display: block;
@@ -1050,6 +1092,7 @@ FIN GALERIA
   /* margin-bottom: 1.5rem; */
   gap: 5px;
 }
+
 .contenido-nosotros .design-five {
   width: 100%;
   height: 100%;
@@ -1058,7 +1101,7 @@ FIN GALERIA
   padding: 10px;
 }
 
-.contenido-nosotros  .design-five .img-fluid {
+.contenido-nosotros .design-five .img-fluid {
 
   width: 100%;
   height: 100%;
@@ -1142,7 +1185,7 @@ FIN GALERIA
 
 .contenido-servicios .id_46 .design-five {
   overflow: hidden;
-display: grid;
+  display: grid;
   place-items: center;
   transition: all 300ms ease;
   border-radius: 10px;
@@ -1158,4 +1201,3 @@ display: grid;
 .contenido-servicios .id_46 .columna-seccion {
   width: 14%;
 }
-

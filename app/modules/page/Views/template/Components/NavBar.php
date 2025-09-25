@@ -17,7 +17,7 @@
                         </a>
                     </li>
                 <?php endfor; ?>
-                <li class="nav-item"><a href="/contact" class="nav-link nav-contact">CONTÁCTENOS</a></li>
+                <li class="nav-item"><a href="/page/contacto" class="nav-link nav-contact">CONTÁCTENOS</a></li>
             </ul>
 
             <div class="hamburger">

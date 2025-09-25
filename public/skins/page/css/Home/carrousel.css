@@ -3,21 +3,31 @@
     .miCarrusel-inner {
         display: flex;
         /* Activa Flexbox */
+        align-items: stretch; /* Hace que todos los elementos tengan la misma altura */
     }
 
     .carousel-item {
         /* Establece el ancho para que quepan 2 ítems */
         /* 100% / 2 = 50% */
-        flex: 0 0 50%;
-
-
+        flex: 0 0 40%;
         display: block;
         /* Asegura que el ítem sea visible */
     }
 }
 
+/* Configuración para el carrusel f-carousel */
+.f-carousel__slide {
+    display: flex;
+    align-items: stretch;
+}
+
+.f-carousel__slide > div {
+    display: flex;
+    width: 100%;
+}
+
 .id_27 {
-    height: 20rem;
+    height: 10vh;
 }
 
 .miCarrusel {
@@ -26,9 +36,6 @@
     z-index: 20;
 }
 
-.miCarrusel-inner {
-    padding: 0 5rem;
-}
 
 
 @media (max-width: 768px) {
@@ -42,7 +49,21 @@
     }
 
     .id_27 {
-        height: 35rem;
+        height: 60vh;
+    }
+    
+    .f-carousel__slide {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .f-carousel__slide > div {
+        display: flex;
+        width: 100%;
+    }
+    
+    .item-products {
+        min-height: 350px; /* Altura mínima menor en móviles */
     }
 }
 
@@ -56,16 +77,20 @@
 
 .item-products {
     width: 100%;
+    height: 100%; /* Asegura que ocupe toda la altura disponible */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     background-color: white;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px; /* Altura mínima para mantener consistencia */
 }
 
 .item-products img {
     width: 100%;
-    height: 100%;
+    height: 30vh;
     border-radius: 10px 10px 0 0;
     object-position: center;
     object-fit: cover;
@@ -75,7 +100,9 @@
     margin: 10px 2rem;
     padding-bottom: 1rem;
     text-align: left;
-    border-bottom: #E3AE24 2px solid;
+    flex-grow: 1; /* Permite que esta sección crezca para empujar el botón hacia abajo */
+    display: flex;
+    flex-direction: column;
 }
 
 .item-products-text h3 {
@@ -127,4 +154,14 @@
 .carouselsection {
     padding: 0 0;
     width: 100%;
+}
+
+.product-ver-mas{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0 2rem 1rem 0;
+    border-top: #E3AE24 2px solid;
+    margin-top: auto; /* Empuja el botón hacia la parte inferior */
 }
