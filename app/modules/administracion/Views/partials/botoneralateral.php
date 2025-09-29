@@ -29,7 +29,7 @@
       <div class="nav-indicator"></div>
     </a>
   </li>
-  <li class="nav-item <?php if ($this->botonpanel == 3) { ?>active<?php } ?>">
+  <li class="nav-item <?php if ($this->botonpanel == 4) { ?>active<?php } ?>">
     <a href="/administracion/productos" class="nav-link">
       <div class="nav-icon">
         <i class="fas fa-file-invoice"></i>
@@ -38,8 +38,26 @@
       <div class="nav-indicator"></div>
     </a>
   </li>
+  <li class="nav-item <?php if ($this->botonpanel == 6) { ?>active<?php } ?>">
+    <a href="/administracion/clientes" class="nav-link">
+      <div class="nav-icon">
+        <i class="fas fa-file-invoice"></i>
+      </div>
+      <span class="nav-text">Administrador de Clientes</span>
+      <div class="nav-indicator"></div>
+    </a>
+  </li>
+  <li class="nav-item <?php if ($this->botonpanel == 7) { ?>active<?php } ?>">
+    <a href="/administracion/album" class="nav-link">
+      <div class="nav-icon">
+        <i class="fas fa-file-invoice"></i>
+      </div>
+      <span class="nav-text">Administrador de Albumes</span>
+      <div class="nav-indicator"></div>
+    </a>
+  </li>
   <?php if (Session::getInstance()->get('kt_login_level') == '1') { ?>
-    <li class="nav-item <?php if ($this->botonpanel == 4) { ?>active<?php } ?>">
+    <li class="nav-item <?php if ($this->botonpanel == 5) { ?>active<?php } ?>">
       <a href="/administracion/usuario" class="nav-link">
         <div class="nav-icon">
           <i class="fas fa-users"></i>

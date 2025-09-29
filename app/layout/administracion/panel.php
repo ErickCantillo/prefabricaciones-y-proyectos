@@ -24,8 +24,8 @@
   <link rel="stylesheet" href="/components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
   <!-- Global CSS -->
   <link rel="stylesheet" href="/skins/administracion/css/global.css">
-  <link rel="stylesheet" href="/skins/administracion/css/modern-table.css">
-  <link rel="stylesheet" href="/skins/administracion/css/modern-content-manager.css">
+  <!-- <link rel="stylesheet" href="/skins/administracion/css/modern-table.css"> -->
+  <!-- <link rel="stylesheet" href="/skins/administracion/css/modern-content-manager.css"> -->
    <link rel="shortcut icon" href="/favicon.png">
     <!-- Dropzone -->
   <link rel="stylesheet" href="/components/dropzone/dist/dropzone.css">

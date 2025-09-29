@@ -38,6 +38,10 @@
   <!-- <link rel="stylesheet" href="/components/fancybox/carousel.css" /> -->
   <link rel="stylesheet" href="/components/fancybox/thumbs.css" />
   <link rel="stylesheet" href="/components/fancybox/fancybox.css" />
+    <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/carousel/carousel.autoscroll.css"
+          /> 
   <script src="/components/fancybox/thumbs.js"></script>
   <script src="/components/fancybox/fancybox.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,6 +49,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/carousel/carousel.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/carousel/carousel.arrows.umd.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/carousel/carousel.autoscroll.umd.js"></script>
+
 
   <script type="text/javascript" id="www-widgetapi-script"
     src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflS50iB-/www-widgetapi.js" async=""></script>

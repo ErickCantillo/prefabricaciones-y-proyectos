@@ -19,7 +19,7 @@ class Page_Model_Template_Template
 		$contenidos = [];
 		// Obtener contenidos principales de la sección
 		$rescontenidos = $contenidoModel->getList(
-			"contenido_estado='1' AND contenido_seccion = '$seccion' AND contenido_padre = '0' or contenido_titulo like 'navBar' or contenido_id = 36", 
+			"contenido_estado='1' AND contenido_seccion = '$seccion' AND contenido_padre = '0' or contenido_titulo like 'navBar'", 
 			"orden ASC"
 		);
 		foreach ($rescontenidos as $key => $contenido) {

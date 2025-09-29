@@ -4,6 +4,7 @@
 *
 */
 
+use Dompdf\FrameDecorator\Page;
 
 define('ROOT_PATH', dirname(__DIR__));
 class Page_mainController extends Controllers_Abstract
@@ -22,6 +23,8 @@ class Page_mainController extends Controllers_Abstract
 		
 		$infoModel = new Page_Model_DbTable_Informacion();
 		$informacion = $infoModel->getList();
+		$clientes = new Administracion_Model_DbTable_Clientes();
+		$this->_view->clientes = $clientes->getList();
 
 		$publicidadModel = new Page_Model_DbTable_Publicidad();
 		$this->_view->botonesFlotantes = $publicidadModel->getList("publicidad_seccion='100' AND publicidad_estado='1'", "orden ASC");

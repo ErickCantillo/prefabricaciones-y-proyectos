@@ -226,7 +226,7 @@ button .vermas-text {
 
 /* Estilo para el párrafo de introducción */
 .intro-text {
-    font-size: 1.5rem;
+    font-size: 2.5vh;
     line-height: 1.6;
     margin-bottom: 30px;
     color: #555;
@@ -255,7 +255,7 @@ button .vermas-text {
 .project-list li {
     margin-bottom: 12px;
     /* Espacio vertical entre los elementos */
-    font-size: 1.3rem;
+    font-size: 2.3vh;
     color: #555;
 }
 
@@ -288,13 +288,12 @@ button .vermas-text {
 .titulo-seccion h2 {
     margin: 0;
     /* Quita el margen por defecto del h2 */
-    font-size: 4rem;
-    font-weight: 400;
-    color: #d4a237;
-    font-family: "Helvetica", sans-serif;
-    /* Mismo color dorado del ejemplo anterior */
-    letter-spacing: 1.5px;
-    /* Espacio entre letras */
+    font-size: 6vh;
+    font-weight: 900;
+    
+    color: #E3AE24;
+    font-family: "Helvetica";
+    
 }
 
 /* Estilo de la línea decorativa */

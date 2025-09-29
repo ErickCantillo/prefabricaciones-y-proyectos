@@ -1,12 +1,12 @@
 <?php
 /**
-* Controlador de Productos que permite la  creacion, edicion  y eliminacion de los Productos del Sistema
+* Controlador de clientes que permite la  creacion, edicion  y eliminacion de los Clientes del Sistema
 */
-class Administracion_productosController extends Administracion_mainController
+class Administracion_clientesController extends Administracion_mainController
 {
-	public $botonpanel = 4;
+	public $botonpanel = 6;
 	/**
-	 * $mainModel  instancia del modelo de  base de datos Productos
+	 * $mainModel  instancia del modelo de  base de datos Clientes
 	 * @var modeloContenidos
 	 */
 	public $mainModel;
@@ -33,7 +33,7 @@ class Administracion_productosController extends Administracion_mainController
 	 * $_csrf_section  nombre de la variable general csrf  que se va a almacenar en la session
 	 * @var string
 	 */
-	protected $_csrf_section = "administracion_productos";
+	protected $_csrf_section = "administracion_clientes";
 
 	/**
 	 * $namepages nombre de la pvariable en la cual se va a guardar  el numero de seccion en la paginacion del controlador
@@ -44,17 +44,17 @@ class Administracion_productosController extends Administracion_mainController
 
 
 	/**
-     * Inicializa las variables principales del controlador productos .
+     * Inicializa las variables principales del controlador clientes .
      *
      * @return void.
      */
 	public function init()
 	{
-		$this->mainModel = new Administracion_Model_DbTable_Productos();
-		$this->namefilter = "parametersfilterproductos";
-		$this->route = "/administracion/productos";
-		$this->namepages ="pages_productos";
-		$this->namepageactual ="page_actual_productos";
+		$this->mainModel = new Administracion_Model_DbTable_Clientes();
+		$this->namefilter = "parametersfilterclientes";
+		$this->route = "/administracion/clientes";
+		$this->namepages ="pages_clientes";
+		$this->namepageactual ="page_actual_clientes";
 		$this->_view->route = $this->route;
 		if(Session::getInstance()->get($this->namepages)){
 			$this->pages = Session::getInstance()->get($this->namepages);
@@ -66,13 +66,13 @@ class Administracion_productosController extends Administracion_mainController
 
 
 	/**
-     * Recibe la informacion y  muestra un listado de  Productos con sus respectivos filtros.
+     * Recibe la informacion y  muestra un listado de  Clientes con sus respectivos filtros.
      *
      * @return void.
      */
 	public function indexAction()
 	{
-		$title = "Aministración de Productos";
+		$title = "Aministración de Clientes";
 		$this->getLayout()->setTitle($title);
 		$this->_view->titlesection = $title;
 		$this->filters();
@@ -104,14 +104,14 @@ class Administracion_productosController extends Administracion_mainController
 	}
 
 	/**
-     * Genera la Informacion necesaria para editar o crear un  Productos  y muestra su formulario
+     * Genera la Informacion necesaria para editar o crear un  Clientes  y muestra su formulario
      *
      * @return void.
      */
 	public function manageAction()
 	{
 		$this->_view->route = $this->route;
-		$this->_csrf_section = "manage_productos_".date("YmdHis");
+		$this->_csrf_section = "manage_clientes_".date("YmdHis");
 		$this->_csrf->generateCode($this->_csrf_section);
 		$this->_view->csrf_section = $this->_csrf_section;
 		$this->_view->csrf = Session::getInstance()->get('csrf')[$this->_csrf_section];
@@ -121,25 +121,25 @@ class Administracion_productosController extends Administracion_mainController
 			if($content->id){
 				$this->_view->content = $content;
 				$this->_view->routeform = $this->route."/update";
-				$title = "Actualizar Productos";
+				$title = "Actualizar Clientes";
 				$this->getLayout()->setTitle($title);
 				$this->_view->titlesection = $title;
 			}else{
 				$this->_view->routeform = $this->route."/insert";
-				$title = "Crear Productos";
+				$title = "Crear Clientes";
 				$this->getLayout()->setTitle($title);
 				$this->_view->titlesection = $title;
 			}
 		} else {
 			$this->_view->routeform = $this->route."/insert";
-			$title = "Crear Productos";
+			$title = "Crear Clientes";
 			$this->getLayout()->setTitle($title);
 			$this->_view->titlesection = $title;
 		}
 	}
 
 	/**
-     * Inserta la informacion de un Productos  y redirecciona al listado de Productos.
+     * Inserta la informacion de un Clientes  y redirecciona al listado de Clientes.
      *
      * @return void.
      */
@@ -149,14 +149,14 @@ class Administracion_productosController extends Administracion_mainController
 		if (Session::getInstance()->get('csrf')[$this->_getSanitizedParam("csrf_section")] == $csrf ) {	
 			$data = $this->getData();
 			$uploadImage =  new Core_Model_Upload_Image();
-			if($_FILES['imagen']['name'] != ''){
-				$data['imagen'] = $uploadImage->upload("imagen");
+			if($_FILES['cliente_imagen']['name'] != ''){
+				$data['cliente_imagen'] = $uploadImage->upload("cliente_imagen");
 			}
 			$id = $this->mainModel->insert($data);
 			
 			$data['id']= $id;
 			$data['log_log'] = print_r($data,true);
-			$data['log_tipo'] = 'CREAR PRODUCTOS';
+			$data['log_tipo'] = 'CREAR CLIENTES';
 			$logModel = new Administracion_Model_DbTable_Log();
 			$logModel->insert($data);
 		}
@@ -164,7 +164,7 @@ class Administracion_productosController extends Administracion_mainController
 	}
 
 	/**
-     * Recibe un identificador  y Actualiza la informacion de un Productos  y redirecciona al listado de Productos.
+     * Recibe un identificador  y Actualiza la informacion de un Clientes  y redirecciona al listado de Clientes.
      *
      * @return void.
      */
@@ -177,26 +177,26 @@ class Administracion_productosController extends Administracion_mainController
 			if ($content->id) {
 				$data = $this->getData();
 				$uploadImage =  new Core_Model_Upload_Image();
-				if($_FILES['imagen']['name'] != ''){
-					if($content->imagen){
-						$uploadImage->delete($content->imagen);
+				if($_FILES['cliente_imagen']['name'] != ''){
+					if($content->cliente_imagen){
+						$uploadImage->delete($content->cliente_imagen);
 					}
-					$data['imagen'] = $uploadImage->upload("imagen");
+					$data['cliente_imagen'] = $uploadImage->upload("cliente_imagen");
 				} else {
-					$data['imagen'] = $content->imagen;
+					$data['cliente_imagen'] = $content->cliente_imagen;
 				}
 				$this->mainModel->update($data,$id);
 			}
 			$data['id']=$id;
 			$data['log_log'] = print_r($data,true);
-			$data['log_tipo'] = 'EDITAR PRODUCTOS';
+			$data['log_tipo'] = 'EDITAR CLIENTES';
 			$logModel = new Administracion_Model_DbTable_Log();
 			$logModel->insert($data);}
 		header('Location: '.$this->route.''.'');
 	}
 
 	/**
-     * Recibe un identificador  y elimina un Productos  y redirecciona al listado de Productos.
+     * Recibe un identificador  y elimina un Clientes  y redirecciona al listado de Clientes.
      *
      * @return void.
      */
@@ -210,12 +210,12 @@ class Administracion_productosController extends Administracion_mainController
 				$content = $this->mainModel->getById($id);
 				if (isset($content)) {
 					$uploadImage =  new Core_Model_Upload_Image();
-					if (isset($content->imagen) && $content->imagen != '') {
-						$uploadImage->delete($content->imagen);
+					if (isset($content->cliente_imagen) && $content->cliente_imagen != '') {
+						$uploadImage->delete($content->cliente_imagen);
 					}
 					$this->mainModel->deleteRegister($id);$data = (array)$content;
 					$data['log_log'] = print_r($data,true);
-					$data['log_tipo'] = 'BORRAR PRODUCTOS';
+					$data['log_tipo'] = 'BORRAR CLIENTES';
 					$logModel = new Administracion_Model_DbTable_Log();
 					$logModel->insert($data); }
 			}
@@ -224,16 +224,16 @@ class Administracion_productosController extends Administracion_mainController
 	}
 
 	/**
-     * Recibe la informacion del formulario y la retorna en forma de array para la edicion y creacion de Productos.
+     * Recibe la informacion del formulario y la retorna en forma de array para la edicion y creacion de clientes.
      *
      * @return array con toda la informacion recibida del formulario.
      */
 	private function getData()
 	{
 		$data = array();
-		$data['titulo'] = $this->_getSanitizedParam("titulo");
-		$data['descripcion'] = $this->_getSanitizedParam("descripcion");
-		$data['imagen'] = "";
+		$data['cliente_nombre'] = $this->_getSanitizedParam("cliente_nombre");
+		$data['cliente_descripcion'] = $this->_getSanitizedParamHtml("cliente_descripcion");
+		$data['cliente_imagen'] = "";
 		return $data;
 	}
 	/**
@@ -246,8 +246,14 @@ class Administracion_productosController extends Administracion_mainController
     	$filtros = " 1 = 1 ";
         if (Session::getInstance()->get($this->namefilter)!="") {
             $filters =(object)Session::getInstance()->get($this->namefilter);
-            if ($filters->titulo != '') {
-                $filtros = $filtros." AND titulo LIKE '%".$filters->titulo."%'";
+            if ($filters->cliente_nombre != '') {
+                $filtros = $filtros." AND cliente_nombre LIKE '%".$filters->cliente_nombre."%'";
+            }
+            if ($filters->cliente_descripcion != '') {
+                $filtros = $filtros." AND cliente_descripcion LIKE '%".$filters->cliente_descripcion."%'";
+            }
+            if ($filters->cliente_imagen != '') {
+                $filtros = $filtros." AND cliente_imagen LIKE '%".$filters->cliente_imagen."%'";
             }
 		}
         return $filtros;
@@ -263,7 +269,9 @@ class Administracion_productosController extends Administracion_mainController
         if ($this->getRequest()->isPost()== true) {
         	Session::getInstance()->set($this->namepageactual,1);
             $parramsfilter = array();
-					$parramsfilter['titulo'] =  $this->_getSanitizedParam("titulo");Session::getInstance()->set($this->namefilter, $parramsfilter);
+					$parramsfilter['cliente_nombre'] =  $this->_getSanitizedParam("cliente_nombre");
+					$parramsfilter['cliente_descripcion'] =  $this->_getSanitizedParam("cliente_descripcion");
+					$parramsfilter['cliente_imagen'] =  $this->_getSanitizedParam("cliente_imagen");Session::getInstance()->set($this->namefilter, $parramsfilter);
         }
         if ($this->_getSanitizedParam("cleanfilter") == 1) {
             Session::getInstance()->set($this->namefilter, '');

@@ -15,7 +15,7 @@ class Page_indexController extends Page_mainController
     $this->_view->productos = $productoModel->getList();
     $this->_view->contenido = $this->template->getContentseccion(1);
     
-
+ 
   }
   public function enviarsubAction()
   {

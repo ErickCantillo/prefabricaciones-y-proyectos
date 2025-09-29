@@ -1,12 +1,12 @@
 <?php
 /**
-* Controlador de Productos que permite la  creacion, edicion  y eliminacion de los Productos del Sistema
+* Controlador de Album que permite la  creacion, edicion  y eliminacion de los Album del Sistema
 */
-class Administracion_productosController extends Administracion_mainController
+class Administracion_albumController extends Administracion_mainController
 {
-	public $botonpanel = 4;
+	public $botonpanel = 7;
 	/**
-	 * $mainModel  instancia del modelo de  base de datos Productos
+	 * $mainModel  instancia del modelo de  base de datos Album
 	 * @var modeloContenidos
 	 */
 	public $mainModel;
@@ -33,7 +33,7 @@ class Administracion_productosController extends Administracion_mainController
 	 * $_csrf_section  nombre de la variable general csrf  que se va a almacenar en la session
 	 * @var string
 	 */
-	protected $_csrf_section = "administracion_productos";
+	protected $_csrf_section = "administracion_album";
 
 	/**
 	 * $namepages nombre de la pvariable en la cual se va a guardar  el numero de seccion en la paginacion del controlador
@@ -44,17 +44,17 @@ class Administracion_productosController extends Administracion_mainController
 
 
 	/**
-     * Inicializa las variables principales del controlador productos .
+     * Inicializa las variables principales del controlador album .
      *
      * @return void.
      */
 	public function init()
 	{
-		$this->mainModel = new Administracion_Model_DbTable_Productos();
-		$this->namefilter = "parametersfilterproductos";
-		$this->route = "/administracion/productos";
-		$this->namepages ="pages_productos";
-		$this->namepageactual ="page_actual_productos";
+		$this->mainModel = new Administracion_Model_DbTable_Album();
+		$this->namefilter = "parametersfilteralbum";
+		$this->route = "/administracion/album";
+		$this->namepages ="pages_album";
+		$this->namepageactual ="page_actual_album";
 		$this->_view->route = $this->route;
 		if(Session::getInstance()->get($this->namepages)){
 			$this->pages = Session::getInstance()->get($this->namepages);
@@ -66,13 +66,13 @@ class Administracion_productosController extends Administracion_mainController
 
 
 	/**
-     * Recibe la informacion y  muestra un listado de  Productos con sus respectivos filtros.
+     * Recibe la informacion y  muestra un listado de  Album con sus respectivos filtros.
      *
      * @return void.
      */
 	public function indexAction()
 	{
-		$title = "Aministración de Productos";
+		$title = "Aministración de Album";
 		$this->getLayout()->setTitle($title);
 		$this->_view->titlesection = $title;
 		$this->filters();
@@ -104,14 +104,14 @@ class Administracion_productosController extends Administracion_mainController
 	}
 
 	/**
-     * Genera la Informacion necesaria para editar o crear un  Productos  y muestra su formulario
+     * Genera la Informacion necesaria para editar o crear un  Album  y muestra su formulario
      *
      * @return void.
      */
 	public function manageAction()
 	{
 		$this->_view->route = $this->route;
-		$this->_csrf_section = "manage_productos_".date("YmdHis");
+		$this->_csrf_section = "manage_album_".date("YmdHis");
 		$this->_csrf->generateCode($this->_csrf_section);
 		$this->_view->csrf_section = $this->_csrf_section;
 		$this->_view->csrf = Session::getInstance()->get('csrf')[$this->_csrf_section];
@@ -121,25 +121,25 @@ class Administracion_productosController extends Administracion_mainController
 			if($content->id){
 				$this->_view->content = $content;
 				$this->_view->routeform = $this->route."/update";
-				$title = "Actualizar Productos";
+				$title = "Actualizar Album";
 				$this->getLayout()->setTitle($title);
 				$this->_view->titlesection = $title;
 			}else{
 				$this->_view->routeform = $this->route."/insert";
-				$title = "Crear Productos";
+				$title = "Crear Album";
 				$this->getLayout()->setTitle($title);
 				$this->_view->titlesection = $title;
 			}
 		} else {
 			$this->_view->routeform = $this->route."/insert";
-			$title = "Crear Productos";
+			$title = "Crear Album";
 			$this->getLayout()->setTitle($title);
 			$this->_view->titlesection = $title;
 		}
 	}
 
 	/**
-     * Inserta la informacion de un Productos  y redirecciona al listado de Productos.
+     * Inserta la informacion de un Album  y redirecciona al listado de Album.
      *
      * @return void.
      */
@@ -149,14 +149,14 @@ class Administracion_productosController extends Administracion_mainController
 		if (Session::getInstance()->get('csrf')[$this->_getSanitizedParam("csrf_section")] == $csrf ) {	
 			$data = $this->getData();
 			$uploadImage =  new Core_Model_Upload_Image();
-			if($_FILES['imagen']['name'] != ''){
-				$data['imagen'] = $uploadImage->upload("imagen");
+			if($_FILES['galeria_imagen']['name'] != ''){
+				$data['galeria_imagen'] = $uploadImage->upload("galeria_imagen");
 			}
 			$id = $this->mainModel->insert($data);
 			
 			$data['id']= $id;
 			$data['log_log'] = print_r($data,true);
-			$data['log_tipo'] = 'CREAR PRODUCTOS';
+			$data['log_tipo'] = 'CREAR ALBUM';
 			$logModel = new Administracion_Model_DbTable_Log();
 			$logModel->insert($data);
 		}
@@ -164,7 +164,7 @@ class Administracion_productosController extends Administracion_mainController
 	}
 
 	/**
-     * Recibe un identificador  y Actualiza la informacion de un Productos  y redirecciona al listado de Productos.
+     * Recibe un identificador  y Actualiza la informacion de un Album  y redirecciona al listado de Album.
      *
      * @return void.
      */
@@ -177,26 +177,26 @@ class Administracion_productosController extends Administracion_mainController
 			if ($content->id) {
 				$data = $this->getData();
 				$uploadImage =  new Core_Model_Upload_Image();
-				if($_FILES['imagen']['name'] != ''){
-					if($content->imagen){
-						$uploadImage->delete($content->imagen);
+				if($_FILES['galeria_imagen']['name'] != ''){
+					if($content->galeria_imagen){
+						$uploadImage->delete($content->galeria_imagen);
 					}
-					$data['imagen'] = $uploadImage->upload("imagen");
+					$data['galeria_imagen'] = $uploadImage->upload("galeria_imagen");
 				} else {
-					$data['imagen'] = $content->imagen;
+					$data['galeria_imagen'] = $content->galeria_imagen;
 				}
 				$this->mainModel->update($data,$id);
 			}
 			$data['id']=$id;
 			$data['log_log'] = print_r($data,true);
-			$data['log_tipo'] = 'EDITAR PRODUCTOS';
+			$data['log_tipo'] = 'EDITAR ALBUM';
 			$logModel = new Administracion_Model_DbTable_Log();
 			$logModel->insert($data);}
 		header('Location: '.$this->route.''.'');
 	}
 
 	/**
-     * Recibe un identificador  y elimina un Productos  y redirecciona al listado de Productos.
+     * Recibe un identificador  y elimina un Album  y redirecciona al listado de Album.
      *
      * @return void.
      */
@@ -210,12 +210,12 @@ class Administracion_productosController extends Administracion_mainController
 				$content = $this->mainModel->getById($id);
 				if (isset($content)) {
 					$uploadImage =  new Core_Model_Upload_Image();
-					if (isset($content->imagen) && $content->imagen != '') {
-						$uploadImage->delete($content->imagen);
+					if (isset($content->galeria_imagen) && $content->galeria_imagen != '') {
+						$uploadImage->delete($content->galeria_imagen);
 					}
 					$this->mainModel->deleteRegister($id);$data = (array)$content;
 					$data['log_log'] = print_r($data,true);
-					$data['log_tipo'] = 'BORRAR PRODUCTOS';
+					$data['log_tipo'] = 'BORRAR ALBUM';
 					$logModel = new Administracion_Model_DbTable_Log();
 					$logModel->insert($data); }
 			}
@@ -224,16 +224,16 @@ class Administracion_productosController extends Administracion_mainController
 	}
 
 	/**
-     * Recibe la informacion del formulario y la retorna en forma de array para la edicion y creacion de Productos.
+     * Recibe la informacion del formulario y la retorna en forma de array para la edicion y creacion de Album.
      *
      * @return array con toda la informacion recibida del formulario.
      */
 	private function getData()
 	{
 		$data = array();
-		$data['titulo'] = $this->_getSanitizedParam("titulo");
-		$data['descripcion'] = $this->_getSanitizedParam("descripcion");
-		$data['imagen'] = "";
+		$data['galeria_titulo'] = $this->_getSanitizedParam("galeria_titulo");
+		$data['galeria_descripcion'] = $this->_getSanitizedParamHtml("galeria_descripcion");
+		$data['galeria_imagen'] = "";
 		return $data;
 	}
 	/**
@@ -246,9 +246,6 @@ class Administracion_productosController extends Administracion_mainController
     	$filtros = " 1 = 1 ";
         if (Session::getInstance()->get($this->namefilter)!="") {
             $filters =(object)Session::getInstance()->get($this->namefilter);
-            if ($filters->titulo != '') {
-                $filtros = $filtros." AND titulo LIKE '%".$filters->titulo."%'";
-            }
 		}
         return $filtros;
     }
@@ -262,8 +259,7 @@ class Administracion_productosController extends Administracion_mainController
     {
         if ($this->getRequest()->isPost()== true) {
         	Session::getInstance()->set($this->namepageactual,1);
-            $parramsfilter = array();
-					$parramsfilter['titulo'] =  $this->_getSanitizedParam("titulo");Session::getInstance()->set($this->namefilter, $parramsfilter);
+            $parramsfilter = array();Session::getInstance()->set($this->namefilter, $parramsfilter);
         }
         if ($this->_getSanitizedParam("cleanfilter") == 1) {
             Session::getInstance()->set($this->namefilter, '');
