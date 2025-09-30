@@ -404,14 +404,7 @@
 					<div class="help-block with-errors"></div>
 				</div>
 
-				<div class="col-12 form-group no-banner si-seccion si-contenido si-carrousel si-acordion si-contenido2 no-start"
-					<?php if (($tipo == 1 || $tipo == 0) && $this->contentpadre->contenido_tipo != 2) { ?> style="display: none;"
-					<?php } ?>>
-					<label for="contenido_descripcion_en" class="form-label">Description (English)</label>
-					<textarea name="contenido_descripcion_en" id="contenido_descripcion_en" class="form-control tinyeditor"
-						rows="10"><?= $this->content->contenido_descripcion_en; ?></textarea>
-					<div class="help-block with-errors"></div>
-				</div>
+				
 			</div>
 			<div class="row no-banner si-seccion si-contenido no-acordion no-carrousel si-contenido2"
 				<?php if ($tipo == 1 || $tipo == 6 || $tipo == 7 || ($tipo == 0 && $this->contentpadre->contenido_tipo == 2)) { ?>

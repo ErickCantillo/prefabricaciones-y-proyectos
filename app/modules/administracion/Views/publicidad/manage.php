@@ -280,12 +280,6 @@
           <div class="help-block with-errors"></div>
         </div>
       </div>
-      <div class="col-12 form-group no-banner">
-        <label for="publicidad_descripcion_en" class="form-label">Description (English)</label>
-        <textarea name="publicidad_descripcion_en" id="publicidad_descripcion_en" class="form-control tinyeditor"
-          rows="10"><?= $this->content->publicidad_descripcion_en; ?></textarea>
-        <div class="help-block with-errors"></div>
-      </div>
     </div>
     <div class="botones-acciones">
       <button class="btn btn-guardar" type="submit">Save</button>

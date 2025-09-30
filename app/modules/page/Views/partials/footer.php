@@ -32,7 +32,7 @@
 
     <div class="col-12 col-lg-4">
       <h5 class="footer-title">DIRECCIÓN</h5>
-      <div class="text-start">
+      <div class="text-start footer-link">
         <p>Autop. Medellín un Km abajo rio Bogotá <br> (Occidente), <br>Cota Cundinamarca, Colombia</p>
       </div>
     </div>
@@ -40,7 +40,7 @@
   </div>
   <div class="col-12">
       <hr>
-      <span class="text-center d-block">
+      <span class="text-center d-block footer-link">
         <?php echo date('Y'); ?> - Todos los derechos reservados - Política de Datos
       </span>
     </div>
