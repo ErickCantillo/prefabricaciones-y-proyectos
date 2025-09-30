@@ -144,7 +144,7 @@ foreach ($albumes as $key => $album) {
         background-color: rgba(0, 0, 0, 0.8);
         color: white;
         border: none;
-        padding: 1+vh 2vw;
+        padding: 1vh 2vw;
         border-radius: 1vh;
         font-size: 2vh;
         font-weight: 500;
