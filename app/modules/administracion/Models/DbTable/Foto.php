@@ -1,7 +1,8 @@
-<?php 
+<?php
+
 /**
-* clase que genera la insercion y edicion  de Foto en la base de datos
-*/
+ * clase que genera la insercion y edicion  de Foto en la base de datos
+ */
 class Administracion_Model_DbTable_Foto extends Db_Table
 {
 	/**
@@ -21,14 +22,21 @@ class Administracion_Model_DbTable_Foto extends Db_Table
 	 * @param  array Array array con la informacion con la cual se va a realizar la insercion en la base de datos
 	 * @return integer      identificador del  registro que se inserto
 	 */
-	public function insert($data){
+	public function getByAlbum($album_id): array
+	{
+		$res = $this->_conn->query('SELECT * FROM ' . $this->_name . ' WHERE galeria_id = "' . $album_id . '"')->fetchAsObject();
+		return $res ?: [];
+	}
+
+	public function insert($data)
+	{
 		$galeria_id = $data['galeria_id'];
 		$foto_titulo = $data['foto_titulo'];
 		$foto_descripcion = $data['foto_descripcion'];
 		$foto_path = $data['foto_path'];
 		$query = "INSERT INTO fotos( galeria_id, foto_titulo, foto_descripcion, foto_path) VALUES ( '$galeria_id', '$foto_titulo', '$foto_descripcion', '$foto_path')";
 		$res = $this->_conn->query($query);
-        return mysqli_insert_id($this->_conn->getConnection());
+		return mysqli_insert_id($this->_conn->getConnection());
 	}
 
 	/**
@@ -37,13 +45,14 @@ class Administracion_Model_DbTable_Foto extends Db_Table
 	 * @param  integer    identificador al cual se le va a realizar la actualizacion
 	 * @return void
 	 */
-	public function update($data,$id){
-		
+	public function update($data, $id)
+	{
+
 		$galeria_id = $data['galeria_id'];
 		$foto_titulo = $data['foto_titulo'];
 		$foto_descripcion = $data['foto_descripcion'];
 		$foto_path = $data['foto_path'];
-		$query = "UPDATE fotos SET  galeria_id = '$galeria_id', foto_titulo = '$foto_titulo', foto_descripcion = '$foto_descripcion', foto_path = '$foto_path' WHERE id = '".$id."'";
+		$query = "UPDATE fotos SET  galeria_id = '$galeria_id', foto_titulo = '$foto_titulo', foto_descripcion = '$foto_descripcion', foto_path = '$foto_path' WHERE id = '" . $id . "'";
 		$res = $this->_conn->query($query);
 	}
 }

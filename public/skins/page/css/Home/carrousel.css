@@ -76,7 +76,7 @@
 }
 
 .item-products {
-    width: 100%;
+    width: 60vw;
     height: 100%; /* Asegura que ocupe toda la altura disponible */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -97,8 +97,8 @@
 }
 
 .item-products-text {
-    margin: 10px 2rem;
-    padding-bottom: 1rem;
+    margin: 2vh 1.5vw;
+    padding-bottom: 0.5vh;
     text-align: left;
     flex-grow: 1; /* Permite que esta sección crezca para empujar el botón hacia abajo */
     display: flex;
@@ -106,7 +106,7 @@
 }
 
 .item-products-text h3 {
-    font-size: 2.5rem;
+    font-size: 3vh;
     text-transform: uppercase;
     font-family: "Helvetica" sans-serif;
     font-weight: 900;
@@ -116,7 +116,7 @@
 
 .item-products-text p {
     color: #999999;
-    font-size: 1.3rem;
+    font-size: 2vh;
     text-align: justify;
     padding-right: 1rem;
     font-family: "Helvetica" sans-serif;

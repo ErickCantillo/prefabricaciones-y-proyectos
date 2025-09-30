@@ -22,6 +22,7 @@
     .cliente-item img {
         filter: grayscale(100%);
         transition: filter 0.3s ease;
+        width: 15vw;
         /* width: 100%; */
         /* height: auto; */
     }
@@ -32,7 +33,7 @@
 </style>
 <section class="contenedor-seccion" style="background-color: #fff;">
     <div class="content-box">
-        <h3 class="text-start clientes-title">Nuestros Clientes</h3>
+        <h3 class="text-start clientes-title">Clientes</h3>
 
         <div class="clientes-container">
 

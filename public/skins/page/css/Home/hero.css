@@ -52,8 +52,8 @@
 }
 
 .nav-logo {
-    max-width: 200px;
-    height: auto;
+    /* width: 12vw; */
+    height: 6vh;
 
 }
 
@@ -67,7 +67,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 2rem;
+    gap: 2vw;
     align-items: center;
 }
 
@@ -76,7 +76,7 @@
 .nav-link {
     color: white;
     text-wrap: nowrap;
-    font-size: 1rem;
+    font-size: 1.8vh;
     font-weight: bold;
     text-transform: uppercase;
     font-style: normal;
@@ -94,7 +94,7 @@
     color: #ffffff;
     font-weight: 600;
     background-color: black;
-    padding: 1.5rem 1rem;
+    padding: 2vh 1vw;
 }
 
 .nav-contact:hover {
@@ -158,7 +158,7 @@
 }
 
 .hero-title {
-    font-size: 2rem;
+    font-size: 4vh;
     color: #E3AE24;
     font-weight: 100;
     font-family: 'Helvetica' sans-serif;
@@ -166,7 +166,7 @@
 }
 
 .hero-description {
-    font-size: 3.5rem;
+    font-size: 6vh;
     color: white;
     width: 47vw;
     font-family: 'Helvetica' sans-serif;
@@ -182,8 +182,8 @@
 .btn-primary {
     background: #E3AE24;
     color: white;
-    padding: 8px 40px;
-    font-size: 1.3rem;
+    padding: 1vh 2.4vw;
+    font-size: 2vh;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;

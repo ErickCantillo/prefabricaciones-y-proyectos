@@ -26,7 +26,7 @@
   }
   .producto-contenido {
     flex: 1;
-    padding: 2rem 2rem;
+    padding: 2vh 1.8vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,7 +35,7 @@
   }
 
   .producto-titulo {
-    font-size: 1.6rem;
+    font-size: 3vh;
     font-weight: 900;
     font-family: "Helvetica", sans-serif;
     color: black;
@@ -44,7 +44,7 @@
   }
 
   .producto-descripcion {
-    font-size: 16px;
+    font-size: 2.3vh;
     line-height: 1.4;
     /* margin-bottom: 20px; */
     flex-grow: 1;

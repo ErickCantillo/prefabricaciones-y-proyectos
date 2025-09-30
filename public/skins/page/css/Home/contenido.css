@@ -60,7 +60,7 @@
 }
 
 .titulo-5 {
-    font-size: 2rem;
+    font-size: 3vh;
     font-family: "Helvetica" sans-serif;
     background: transparent;
     border: 0;
@@ -77,8 +77,8 @@
     text-align: left;
     box-shadow: black 0 0 10px;
     background-color: white;
-    border-radius: 10px;
-    padding: 25px 40px;
+    border-radius: 2vh;
+    padding: 3vh 4vw;
 }
 
 button {
@@ -136,7 +136,7 @@ button .vermas-text {
 
 .descripcion-5 p {
     margin-top: 100px;
-    font-size: 1.4rem;
+    font-size: 2vh;
     line-height: 2;
     text-align: justify;
     color: #999;
@@ -153,7 +153,7 @@ button .vermas-text {
 }
 
 .titulo-feature {
-    font-size: 2rem;
+    font-size: 5vh;
     font-weight: 900;
     /* uppercase; */
     text-transform: uppercase;
@@ -183,13 +183,13 @@ button .vermas-text {
     font-weight: 100;
     font-family: "Helvetica", sans-serif;
     color: white;
-    font-size: 1.2rem;
+    font-size: 2vh;
     cursor: pointer;
 }
 
 .feature p {
     width: 80%;
-    font-size: 1.6rem;
+    font-size: 2.5vh;
     font-family: "Helvetica", sans-serif;
     font-weight: 300;
 }
@@ -221,7 +221,7 @@ button .vermas-text {
 
 /* Contenedor principal para alinear y limitar el ancho */
 .nosotros-container {
-    padding: 40px 20px;
+    padding: 3.2vh 3vw;
 }
 
 /* Estilo para el párrafo de introducción */
@@ -236,9 +236,9 @@ button .vermas-text {
 .project-list-container {
     display: flex;
     justify-content: space-between;
-    padding: 20px 50px;
+    padding: 2vh 3vw;
     /* Espacio entre las columnas */
-    gap: 10px;
+    gap: 1.5vw;
     /* Espacio mínimo entre columnas */
 }
 
@@ -337,7 +337,7 @@ button .vermas-text {
 
 .design-three {
     padding: 2vh 4vw;
-    font-size: 1.2rem;
+    font-size: 2vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -370,7 +370,7 @@ button .vermas-text {
 }
 
 .product-list li {
-    font-size: 1.2rem;
+    font-size: 1.8vh;
     font-weight: bold;
     margin-bottom: 18px;
     display: flex;
@@ -390,7 +390,7 @@ button .vermas-text {
     margin-top: 4vh;
     padding-top: 4vh 0;
     border-bottom: solid #d4a237;
-    font-size: 2rem;
+    font-size: 4vh;
     font-weight: 900;
     text-transform: uppercase;
 }
@@ -518,9 +518,9 @@ button .vermas-text {
     background: linear-gradient(135deg, #252424, #333333);
     color: white;
     width: fit-content;
-    padding: 12px 40px;
-    border-radius: 15px;
-    font-size: 0.9rem;
+    padding: 1vh 2vw;
+    border-radius: 1vh;
+    font-size: 1.8vh;
     font-weight: 500;
     text-decoration: none;
     display: inline-flex;
@@ -582,7 +582,7 @@ button .vermas-text {
 
 @media (max-width: 768px) {
     .titulo-5 {
-        font-size: 1.5rem;
+        font-size: 4vh;
     }
 
     .project-list-container {
