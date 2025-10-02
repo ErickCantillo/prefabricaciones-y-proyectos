@@ -7,7 +7,7 @@
     <?php $infopageModel = new Page_Model_DbTable_Informacion();
     $infopage = $infopageModel->getById(1);
     ?>
-    <div class="col-12 col-lg-8 row mx-4">
+    <div class="col-12 col-lg-8 row mx-lg-4">
       
       <div class="col-12 col-lg-4">
       <h5 class="footer-title">Enlaces</h5>

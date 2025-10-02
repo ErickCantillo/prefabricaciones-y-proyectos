@@ -3,7 +3,8 @@
     .miCarrusel-inner {
         display: flex;
         /* Activa Flexbox */
-        align-items: stretch; /* Hace que todos los elementos tengan la misma altura */
+        align-items: stretch;
+        /* Hace que todos los elementos tengan la misma altura */
     }
 
     .carousel-item {
@@ -21,7 +22,7 @@
     align-items: stretch;
 }
 
-.f-carousel__slide > div {
+.f-carousel__slide>div {
     display: flex;
     width: 100%;
 }
@@ -36,7 +37,28 @@
     z-index: 20;
 }
 
+.item-carrussel {
+    width: 80%;
+    position: absolute;
+    border-radius: 0 10px;
+    min-height: 60;
+}
 
+/* Estilos generales para item-products (pantallas grandes) */
+.item-products {
+    width: 60vw;
+    height: 100%;
+    /* Asegura que ocupe toda la altura disponible */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+    /* Altura mínima para mantener consistencia */
+}
 
 @media (max-width: 768px) {
     .miCarrusel {
@@ -51,41 +73,25 @@
     .id_27 {
         height: 60vh;
     }
-    
+
     .f-carousel__slide {
         display: flex;
         align-items: stretch;
     }
 
-    .f-carousel__slide > div {
+    .f-carousel__slide>div {
         display: flex;
         width: 100%;
     }
-    
+
     .item-products {
-        min-height: 350px; /* Altura mínima menor en móviles */
+        min-height: 40vh !important;
+        /* Altura mínima menor en móviles */
+        width: 85vw !important;
+        /* Deja márgenes laterales más cómodos */
+        max-width: 350px;
+        /* Evita que sea demasiado ancho en tablets pequeñas */
     }
-}
-
-
-.item-carrussel {
-    width: 80%;
-    position: absolute;
-    border-radius: 0 10px;
-    min-height: 60;
-}
-
-.item-products {
-    width: 60vw;
-    height: 100%; /* Asegura que ocupe toda la altura disponible */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 400px; /* Altura mínima para mantener consistencia */
 }
 
 .item-products img {
@@ -100,7 +106,8 @@
     margin: 2vh 1.5vw;
     padding-bottom: 0.5vh;
     text-align: left;
-    flex-grow: 1; /* Permite que esta sección crezca para empujar el botón hacia abajo */
+    flex-grow: 1;
+    /* Permite que esta sección crezca para empujar el botón hacia abajo */
     display: flex;
     flex-direction: column;
 }
@@ -156,12 +163,13 @@
     width: 100%;
 }
 
-.product-ver-mas{
+.product-ver-mas {
     width: 100%;
     display: flex;
     justify-content: end;
     align-items: center;
     padding: 1vh 2vh 0.2vw 0;
     border-top: #E3AE24 2px solid;
-    margin-top: auto; /* Empuja el botón hacia la parte inferior */
+    margin-top: auto;
+    /* Empuja el botón hacia la parte inferior */
 }

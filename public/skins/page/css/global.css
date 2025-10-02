@@ -436,7 +436,7 @@ FLOTANTES FIN
   --f-carousel-slide-padding: 20px;
   /* --f-carousel-slide-bg: #eee; */
 
-  --f-arrow-pos: 10px;
+  --f-arrow-pos: -2vw;
   --f-arrow-width: 50px;
   --f-arrow-height: 50px;
   --f-arrow-svg-width: 24px;
