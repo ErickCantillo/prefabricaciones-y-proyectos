@@ -4,6 +4,16 @@
     background-color: white;
   }
 
+  .productos-container .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; /* Esto hace que todas las columnas tengan la misma altura */
+  }
+
+  .productos-container .col-sm-12.col-md-6 {
+    display: flex; /* Para que el contenido se estire */
+  }
+
   .producto-card {
     display: flex;
     background: white;
@@ -11,8 +21,10 @@
     overflow: hidden;
     border: 4px solid white;
     box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.35);
-    height: 25vh;
+    min-height: 25vh; /* Cambio de height fijo a min-height */
     margin-bottom: 20px;
+    width: 100%; /* Para que ocupe todo el ancho de la columna */
+    flex: 1; /* Para que se estire verticalmente */
   }
 
   .producto-imagen {
