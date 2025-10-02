@@ -10,14 +10,22 @@
 						<img src="<?php echo '/images/' . $producto->imagen; ?>" alt="">
 						<div class="item-products-text">
 							<h3><?php echo $producto->titulo; ?></h3>
-							<p><?php echo $producto->descripcion; ?></p>
+							<p><?php 
+								$descripcion = $producto->descripcion;
+								$palabras = explode(' ', $descripcion);
+								if (count($palabras) > 20) {
+									echo implode(' ', array_slice($palabras, 0, 20)) . '...';
+								} else {
+									echo $descripcion;
+								}
+							?></p>
 						</div>
 						<p class="product-ver-mas">
-							<button>
+							<a href="/page/productos">
 								<span class="btn-ver-mas-black">
 									Ver más
 								</span>
-							</button>
+							</a>
 						</p>
 					</div>
 				</div>
