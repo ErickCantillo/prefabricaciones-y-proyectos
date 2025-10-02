@@ -40,8 +40,8 @@
   </div>
   <div class="col-12">
       <hr>
-      <span class="text-center d-block footer-link">
-        <?php echo date('Y'); ?> - Todos los derechos reservados - Política de Datos
+      <span class="text-center d-block">
+        Todos los derechos reservados <?= date('Y'); ?>  - Desarrollado por Omega Soluciones Web
       </span>
     </div>
 </section>

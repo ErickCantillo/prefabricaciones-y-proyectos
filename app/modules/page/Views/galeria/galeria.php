@@ -1,4 +1,4 @@
-<?php
+co<?php
 $galeriaModel = new Administracion_Model_DbTable_Album();
 $albumes = $galeriaModel->getList();
 $fotoModel = new Administracion_Model_DbTable_Foto();

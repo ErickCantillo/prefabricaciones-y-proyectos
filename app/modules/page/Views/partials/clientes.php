@@ -1,7 +1,7 @@
 <style>
     #myCarouselClientes {
         --f-carousel-gap: 2vw;
-        --f-carousel-slide-width: 30vw;
+        --f-carousel-slide-width: 15vw;
         --f-carousel-slide-padding: 2vw;
     }
 
@@ -22,7 +22,7 @@
     .cliente-item img {
         filter: grayscale(100%);
         transition: filter 0.3s ease;
-        width: 15vw;
+        width: 12vw;
         /* width: 100%; */
         /* height: auto; */
     }
