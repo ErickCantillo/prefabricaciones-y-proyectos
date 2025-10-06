@@ -71,7 +71,7 @@ $clientesData = (array) $this->clientes;
         padding: 1vh 0.2vw;
         cursor: pointer;
         transition: all 0.3s ease;
-        border: 1vw solid white;
+        border: 0.2vw solid white;
         box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.35);
     }
 
@@ -83,7 +83,7 @@ $clientesData = (array) $this->clientes;
     .cliente-logo-container {
         position: relative;
         width: 100%;
-        height: 12vh;
+        height: 25vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -93,7 +93,7 @@ $clientesData = (array) $this->clientes;
 
     .cliente-logo {
         width: 100%;
-        max-height: 100vh;
+        max-height: 25vh;
         object-fit: contain;
         transition: all 0.4s ease;
         filter: grayscale(100%);
