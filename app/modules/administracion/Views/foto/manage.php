@@ -5,6 +5,7 @@
 		<div class="content-dashboard">
 			<input type="hidden" name="csrf" id="csrf" value="<?php echo $this->csrf ?>">
 			<input type="hidden" name="csrf_section" id="csrf_section" value="<?php echo $this->csrf_section ?>">
+			<input type="hidden" name="galeria_id" id="galeria_id" value="<?= $this->album_id; ?>" />
 			<?php if ($this->content->id) { ?>
 				<input type="hidden" name="id" id="id" value="<?= $this->content->id; ?>" />
 			<?php }?>

@@ -68,7 +68,7 @@ $clientesData = (array) $this->clientes;
     .cliente-card {
         background: white;
         border-radius: 12px;
-        padding: 2vh 2vw;
+        padding: 1vh 0.2vw;
         cursor: pointer;
         transition: all 0.3s ease;
         border: 1vw solid white;
@@ -93,7 +93,7 @@ $clientesData = (array) $this->clientes;
 
     .cliente-logo {
         width: 100%;
-        max-height: 10vh;
+        max-height: 100vh;
         object-fit: contain;
         transition: all 0.4s ease;
         filter: grayscale(100%);

@@ -59,7 +59,7 @@
 					</select>
 				</div>
 				<div class="col-3">
-					<div class="text-end"><a class="btn btn-sm btn-success" href="<?php echo $this->route . "\manage"; ?>"> <i class="fas fa-plus-square"></i> Crear Nuevo</a></div>
+					<div class="text-end"><a class="btn btn-sm btn-success" href="<?php echo $this->route . "\manage?album_id=" . $this->album_id; ?>"> <i class="fas fa-plus-square"></i> Crear Nuevo</a></div>
 				</div>
 			</div>
 		</div>

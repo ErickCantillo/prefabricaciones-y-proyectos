@@ -77,10 +77,12 @@ class Administracion_fotoController extends Administracion_mainController
 		$this->filters();
 		$this->_view->csrf = Session::getInstance()->get('csrf')[$this->_csrf_section];
 		$filters =(object)Session::getInstance()->get($this->namefilter);
+		$this->_view->album_id = $this->_getSanitizedParam("album");
+
         $this->_view->filters = $filters;
 		$filters = $this->getFilter();
 		$order = "";
-		$list = $this->mainModel->getList($filters,$order);
+		$list = $this->mainModel->getList( $filters,$order);
 		$amount = $this->pages;
 		$page = $this->_getSanitizedParam("page");
 		if (!$page && Session::getInstance()->get($this->namepageactual)) {
@@ -114,6 +116,7 @@ class Administracion_fotoController extends Administracion_mainController
 		$this->_csrf->generateCode($this->_csrf_section);
 		$this->_view->csrf_section = $this->_csrf_section;
 		$this->_view->csrf = Session::getInstance()->get('csrf')[$this->_csrf_section];
+		$this->_view->album_id = $this->_getSanitizedParam("album_id");
 		$this->_view->list_galeria_id = $this->getGaleriaid();
 		$id = $this->_getSanitizedParam("id");
 		if ($id > 0) {
@@ -145,6 +148,7 @@ class Administracion_fotoController extends Administracion_mainController
      */
 	public function insertAction(){
 		$this->setLayout('blanco');
+		// $album_id = $this->_getSanitizedParam("album_id");
 		$csrf = $this->_getSanitizedParam("csrf");
 		if (Session::getInstance()->get('csrf')[$this->_getSanitizedParam("csrf_section")] == $csrf ) {	
 			$data = $this->getData();
@@ -155,6 +159,7 @@ class Administracion_fotoController extends Administracion_mainController
 			$id = $this->mainModel->insert($data);
 			
 			$data['id']= $id;
+			// $data['galeria_id'] = $album_id;
 			$data['log_log'] = print_r($data,true);
 			$data['log_tipo'] = 'CREAR FOTO';
 			$logModel = new Administracion_Model_DbTable_Log();
@@ -231,11 +236,7 @@ class Administracion_fotoController extends Administracion_mainController
 	private function getData()
 	{
 		$data = array();
-		if($this->_getSanitizedParam("galeria_id") == '' ) {
-			$data['galeria_id'] = '0';
-		} else {
-			$data['galeria_id'] = $this->_getSanitizedParam("galeria_id");
-		}
+		
 		if($this->_getSanitizedParam("foto_titulo") == '' ) {
 			$data['foto_titulo'] = '0';
 		} else {
@@ -243,6 +244,7 @@ class Administracion_fotoController extends Administracion_mainController
 		}
 		$data['foto_descripcion'] = $this->_getSanitizedParamHtml("foto_descripcion");
 		$data['foto_path'] = "";
+		$data['galeria_id'] = $this->_getSanitizedParam("galeria_id");
 		return $data;
 	}
 
@@ -265,7 +267,7 @@ class Administracion_fotoController extends Administracion_mainController
      */
     protected function getFilter()
     {
-    	$filtros = " 1 = 1 ";
+    	$filtros = " 1 = 1 and galeria_id = '".$this->_view->album_id."' ";
         if (Session::getInstance()->get($this->namefilter)!="") {
             $filters =(object)Session::getInstance()->get($this->namefilter);
 		}

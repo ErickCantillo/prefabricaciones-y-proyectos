@@ -28,6 +28,9 @@ class Administracion_Model_DbTable_Foto extends Db_Table
 		return $res ?: [];
 	}
 
+
+
+
 	public function insert($data)
 	{
 		$galeria_id = $data['galeria_id'];
