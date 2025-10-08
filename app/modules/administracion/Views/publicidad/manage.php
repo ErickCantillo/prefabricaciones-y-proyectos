@@ -25,7 +25,7 @@
       <div class="row">
         <?php if (!$padre && $padre == 0) { ?>
           <div class="col-2 form-group">
-            <label class="control-label">Section</label>
+            <label class="control-label">Sección</label>
             <label class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text input-icono  fondo-cafe "><i class="far fa-list-alt"></i></span>
