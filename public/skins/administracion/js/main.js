@@ -321,7 +321,7 @@ $(document).ready(function () {
   //   }
   // });
   $(".file-image").fileinput({
-    maxFileSize: 10000,
+    maxFileSize: 1000000,
     previewFileType: "image",
     allowedFileExtensions: ["jpg", "jpeg", "gif", "png", "ico"],
     browseClass: "btn  btn-verde",
